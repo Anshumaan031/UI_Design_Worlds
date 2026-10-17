@@ -1,0 +1,53 @@
+.os-s { --desk: #008080; --face: #C0C0C0; --hi: #FFFFFF; --lo: #808080; --dark: #0A0A0A; --navy: #000080; --title2: #1084D0; background: var(--desk); color: #000; font: 15px/1.35 'Pixelify Sans', sans-serif; min-height: 480px; border-radius: 16px; }
+.os-s__wall { position: absolute; right: 24px; bottom: 54px; margin: 0; font: 700 clamp(44px, 9vw, 112px)/0.86 'Pixelify Sans', sans-serif; color: rgba(255, 255, 255, 0.13); text-align: right; pointer-events: none; }
+.os-s__icons { position: absolute; top: 14px; left: 10px; display: grid; gap: 10px; }
+.os-s__icon { appearance: none; background: none; border: 0; width: 84px; padding: 4px; display: grid; justify-items: center; gap: 5px; color: #fff; font: 14px 'Pixelify Sans', sans-serif; cursor: pointer; }
+.os-s__icon span { padding: 0 3px; }
+.os-s__icon.sel span { background: var(--navy); outline: 1px dotted #fff; }
+.os-s__icon:focus-visible { outline: none; } .os-s__icon:focus-visible span { outline: 1px dotted #fff; }
+.os-s__ico { display: block; width: 34px; height: 30px; }
+.os-s__ico--dir { background: linear-gradient(#FFE58A, #E3B12A); clip-path: polygon(0 0, 40% 0, 50% 16%, 100% 16%, 100% 100%, 0 100%); }
+.os-s__ico--txt { width: 26px; height: 32px; background: repeating-linear-gradient(transparent 0 5px, #8A9AA0 5px 6px) 5px 9px / 16px 20px no-repeat, #fff; clip-path: polygon(0 0, 70% 0, 100% 24%, 100% 100%, 0 100%); }
+.os-s__ico--bin { width: 26px; height: 32px; background: linear-gradient(#5d5d5d 0 4px, transparent 4px), repeating-linear-gradient(90deg, #8A8A8A 0 3px, #DADADA 3px 6px); clip-path: polygon(0 0, 100% 0, 88% 100%, 12% 100%); }
+.os-s__win { position: absolute; z-index: 2; width: min(360px, calc(100% - 24px)); padding: 3px; background: var(--face); border: 2px solid; border-color: var(--hi) var(--dark) var(--dark) var(--hi); box-shadow: inset -1px -1px var(--lo), inset 1px 1px #DFDFDF, 6px 6px 0 rgba(0, 0, 0, 0.25); }
+.os-s__win[hidden] { display: none; }
+.os-s__win--about { left: 120px; top: 26px; }
+.os-s__win--install { left: 46%; top: 190px; }
+.os-s__win--proj { left: 30%; top: 70px; }
+.os-s__win--bin { left: 22%; top: 140px; width: min(300px, calc(100% - 24px)); }
+.os-s__bar { display: flex; align-items: center; gap: 6px; padding: 3px 3px 3px 6px; background: linear-gradient(90deg, var(--navy), var(--title2)); color: #fff; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; }
+.os-s__bar:active { cursor: grabbing; }
+.os-s__win:not(.top) .os-s__bar { background: linear-gradient(90deg, #808080, #B5B5B5); color: #DCDCDC; }
+.os-s__bar b { flex: 1; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.os-s__x { appearance: none; width: 22px; height: 19px; padding: 0; display: grid; place-items: center; font: 700 13px/1 'Pixelify Sans', sans-serif; background: var(--face); color: #000; border: 2px solid; border-color: var(--hi) var(--dark) var(--dark) var(--hi); cursor: pointer; }
+.os-s__x:active { border-color: var(--dark) var(--hi) var(--hi) var(--dark); }
+.os-s__body { padding: 14px 12px 12px; display: grid; gap: 12px; }
+.os-s__body h4 { margin: 0; font: 700 clamp(26px, 3.6vw, 36px)/1 'Pixelify Sans', sans-serif; }
+.os-s__body p { margin: 0; }
+.os-s__well { background: #fff; border: 2px solid; border-color: var(--lo) var(--hi) var(--hi) var(--lo); box-shadow: inset 1px 1px var(--dark); padding: 4px; }
+.os-s__row { display: flex; justify-content: space-between; gap: 12px; padding: 2px 6px; cursor: default; }
+.os-s__row:hover { background: var(--navy); color: #fff; }
+.os-s__prog { height: 24px; padding: 2px; display: flex; gap: 2px; border: 2px solid; border-color: var(--lo) var(--hi) var(--hi) var(--lo); overflow: hidden; }
+.os-s__prog i { flex: none; width: 13px; background: var(--navy); }
+.os-s__btns { display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
+.os-s__btn { appearance: none; min-width: 84px; padding: 4px 12px; background: var(--face); color: #000; font: 15px 'Pixelify Sans', sans-serif; border: 2px solid; border-color: var(--hi) var(--dark) var(--dark) var(--hi); box-shadow: inset -1px -1px var(--lo), inset 1px 1px #DFDFDF; cursor: pointer; }
+.os-s__btn:active, .os-s__btn[aria-pressed='true'] { border-color: var(--dark) var(--hi) var(--hi) var(--dark); box-shadow: inset 1px 1px var(--lo); background: #D4D4D4; }
+.os-s__btn:focus-visible { outline: 1px dotted #000; outline-offset: -5px; }
+.os-s__task { position: absolute; z-index: 1000; left: 0; right: 0; bottom: 0; height: 38px; display: flex; align-items: center; gap: 6px; padding: 3px 4px; background: var(--face); border-top: 2px solid var(--hi); box-shadow: inset 0 1px #DFDFDF; }
+.os-s__start { font-weight: 700; min-width: 0; display: flex; align-items: center; gap: 6px; }
+.os-s__start i { width: 14px; height: 14px; background: conic-gradient(#FF3B30 0 25%, #FFD400 0 50%, #2E7DFF 0 75%, #18B26B 0); rotate: 45deg; }
+.os-s__tasks { display: flex; gap: 4px; min-width: 0; overflow: hidden; flex: 1; }
+.os-s__tasks .os-s__btn { min-width: 0; max-width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; }
+.os-s__clock { flex: none; padding: 3px 10px; border: 2px solid; border-color: var(--lo) var(--hi) var(--hi) var(--lo); font-variant-numeric: tabular-nums; }
+.os-s__menu { position: absolute; z-index: 1001; left: 4px; bottom: 37px; width: 220px; display: flex; background: var(--face); border: 2px solid; border-color: var(--hi) var(--dark) var(--dark) var(--hi); box-shadow: inset -1px -1px var(--lo); }
+.os-s__menu[hidden] { display: none; }
+.os-s__menu > b { writing-mode: vertical-rl; rotate: 180deg; padding: 8px 4px; background: linear-gradient(var(--title2), var(--navy)); color: #fff; font: 700 20px 'Pixelify Sans', sans-serif; letter-spacing: 0.04em; }
+.os-s__menu ul { list-style: none; margin: 0; padding: 4px 0; flex: 1; }
+.os-s__menu button { appearance: none; width: 100%; text-align: left; border: 0; background: none; padding: 8px 12px; font: 15px 'Pixelify Sans', sans-serif; color: #000; cursor: pointer; }
+.os-s__menu button:hover, .os-s__menu button:focus-visible { background: var(--navy); color: #fff; outline: none; }
+@media (max-width: 700px) {
+  .os-s__icons { grid-auto-flow: column; top: auto; bottom: 44px; left: 4px; }
+  .os-s__win--about, .os-s__win--install, .os-s__win--proj, .os-s__win--bin { left: 12px; }
+  .os-s__win--install { top: 230px; }
+  .os-s__wall { display: none; }
+}

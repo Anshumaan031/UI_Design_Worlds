@@ -1,0 +1,94 @@
+{
+  "id": "heavy",
+  "name": "Heavy Load",
+  "status": "built",
+  "tone": "dark",
+  "play": "medium",
+  "fit": "Bold personal brands, ops/infra, launches",
+  "use": [
+    "Launch / event",
+    "Portfolio"
+  ],
+  "feel": [
+    "Loud",
+    "Severe"
+  ],
+  "keywords": "industrial construction yellow stencil caution machinery split-flap",
+  "idea": "Plant machinery in black and safety yellow: crawling hazard tape, stencil paint, riveted plates and a split-flap board. Everything has weight.",
+  "note": "Live: tape crawls, split-flap flips on click, stripes sweep into the button on hover.",
+  "fonts": [
+    "Big+Shoulders+Stencil+Display:wght@700;900",
+    "Archivo:wdth,wght@62..125,400..900"
+  ],
+  "borrowed": "Industrial safety signage and plant floors: black-and-yellow hazard chevrons, spray-stencilled lettering, riveted rating plates, and the clacking split-flap boards of old stations and airports.",
+  "mood": "Loud, confident, built to last. Suits bold personal brands, infra/ops tooling, product launches, construction-tech. Wrong for calm, wellness or luxury.",
+  "palette": [
+    {
+      "name": "Ink",
+      "hex": "#0B0B0A",
+      "role": "background"
+    },
+    {
+      "name": "Steel",
+      "hex": "#161614",
+      "role": "panels"
+    },
+    {
+      "name": "Safety yellow",
+      "hex": "#FFD400",
+      "role": "display, actions"
+    },
+    {
+      "name": "Yellow deep",
+      "hex": "#E0B700",
+      "role": "pressed states"
+    },
+    {
+      "name": "Paint white",
+      "hex": "#F4F1E6",
+      "role": "body text"
+    },
+    {
+      "name": "Dust",
+      "hex": "#B8B29A",
+      "role": "secondary"
+    }
+  ],
+  "type": [
+    {
+      "sample": "Load rated",
+      "style": "font-family:'Big Shoulders Stencil Display';font-weight:900;font-size:44px;text-transform:uppercase",
+      "meta": "Display · Big Shoulders Stencil Display 900; outline lines via -webkit-text-stroke"
+    },
+    {
+      "sample": "Shift log · 2024",
+      "style": "font-family:'Archivo';font-variation-settings:'wdth' 75;font-weight:800;font-size:26px;text-transform:uppercase",
+      "meta": "Body & flaps · Archivo variable (wdth 62–125, wght 400–900)"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:repeating-linear-gradient(-45deg,#FFD400 0 16px,#0B0B0A 16px 32px)",
+      "label": "Hazard tape · −45°"
+    },
+    {
+      "css": "background:radial-gradient(circle at 1px 1px, rgba(255,212,0,.3) 1.4px, transparent 1.8px) 0 0/14px 14px, #0B0B0A",
+      "label": "Perforated plate dots"
+    },
+    {
+      "css": "background:radial-gradient(circle, #8a8676 3px, #3a3830 4px, transparent 5px) 12px 12px/calc(100% - 24px) calc(100% - 24px), #FFD400",
+      "label": "Riveted plate corners"
+    }
+  ],
+  "motion": [
+    "Tape crawl: background-position loop, 1.4–1.6s linear. Size the tile to the stripe diagonal (stripe × 2 × √2) so it loops without a jump.",
+    "Split-flap: each cell cycles random glyphs every ~48ms, then settles left to right with a stagger.",
+    "Name stamped letter by letter; belts of words move with scroll."
+  ],
+  "watchouts": [
+    "Yellow is a fill and a headline colour. Never body text on white.",
+    "Thick coloured borders on one side of a card read as a cheap trick. Use gaps over a yellow ground instead.",
+    "Moving tape must stop when the user prefers reduced motion."
+  ],
+  "tokens": "--ink: #0B0B0A;  --steel: #161614;  --yel: #FFD400;  --yel-deep: #E0B700;  --text: #F4F1E6;  --dim: #B8B29A;\n--stencil: 'Big Shoulders Stencil Display', sans-serif;  --body: 'Archivo', sans-serif;\ntape: repeating-linear-gradient(-45deg, var(--yel) 0 18px, var(--ink) 18px 36px) / 50.9px 100%"
+}

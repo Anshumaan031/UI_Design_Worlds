@@ -1,0 +1,33 @@
+.bp-s {
+  --ground: #123F7E; --deep: #0C2E5E; --line: #EEF4FF; --dim: #A9C0E2; --stamp: #FF5A4E;
+  background-color: var(--ground);
+  background-image:
+    linear-gradient(rgba(238, 244, 255, 0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(238, 244, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(rgba(238, 244, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(238, 244, 255, 0.06) 1px, transparent 1px);
+  background-size: 160px 160px, 160px 160px, 32px 32px, 32px 32px;
+  color: var(--line); font-family: 'Barlow', sans-serif;
+  padding: 28px;
+}
+.bp-s__sheet { position: relative; border: 2px solid var(--line); outline: 1px solid var(--dim); outline-offset: 6px; padding: 28px 28px 110px; min-height: 300px; }
+.bp-s h4 { margin: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: clamp(34px, 5vw, 56px); line-height: 1; text-transform: uppercase; letter-spacing: 0.02em; }
+.bp-s__dim { display: block; width: min(420px, 100%); margin-top: 22px; }
+.bp-s__dim line, .bp-s__dim path { stroke: var(--line); stroke-width: 1.5; fill: none; }
+.bp-s__dim text { fill: var(--line); font: 600 13px 'Barlow Condensed', sans-serif; letter-spacing: 0.1em; }
+.bp-s__dim .draw { stroke-dasharray: 400; stroke-dashoffset: 400; animation: bpDraw 1.6s cubic-bezier(0.16, 1, 0.3, 1) 300ms forwards; }
+@keyframes bpDraw { to { stroke-dashoffset: 0; } }
+.bp-s__tb { position: absolute; right: -2px; bottom: -2px; display: grid; grid-template-columns: repeat(3, auto); border: 2px solid var(--line); background: var(--ground); font-family: 'Barlow Condensed', sans-serif; }
+.bp-s__tb div { padding: 6px 14px; border-left: 1px solid var(--dim); }
+.bp-s__tb div:first-child { border-left: 0; }
+.bp-s__tb small { display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dim); }
+.bp-s__tb b { font-weight: 600; font-size: 17px; letter-spacing: 0.06em; }
+.bp-s__btn { margin-top: 20px; appearance: none; background: transparent; color: var(--line); border: 1.5px dashed var(--line); padding: 8px 16px; font: 600 14px 'Barlow Condensed', sans-serif; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; }
+.bp-s__btn:hover { background: var(--line); color: var(--ground); border-style: solid; }
+.bp-s__stamp {
+  position: absolute; right: 9%; top: 26%;
+  padding: 8px 16px; border: 3px solid var(--stamp); border-radius: 6px; color: var(--stamp);
+  font: 700 26px 'Barlow Condensed', sans-serif; letter-spacing: 0.14em; text-transform: uppercase;
+  rotate: -12deg; opacity: 0; scale: 2.2; pointer-events: none;
+  -webkit-mask: radial-gradient(circle at 30% 40%, #000 60%, rgba(0, 0, 0, 0.75) 61%) ; mask: radial-gradient(circle at 30% 40%, #000 60%, rgba(0, 0, 0, 0.75) 61%);
+}
+.bp-s__stamp.is-on { animation: bpStamp 380ms cubic-bezier(0.3, 1.4, 0.5, 1) forwards; }
+@keyframes bpStamp { to { opacity: 0.92; scale: 1; } }

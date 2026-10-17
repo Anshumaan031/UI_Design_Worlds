@@ -1,0 +1,95 @@
+{
+  "id": "teletext",
+  "name": "Teletext",
+  "status": "built",
+  "tone": "dark",
+  "play": "medium",
+  "fit": "Retro-tech, media, playful dev portfolios",
+  "use": [
+    "Portfolio",
+    "Music & culture"
+  ],
+  "feel": [
+    "Retro",
+    "Playful",
+    "Technical"
+  ],
+  "keywords": "ceefax tv broadcast pixel terminal monospace",
+  "idea": "The site is a broadcast text service: black screen, eight fixed colours, one bitmap face, a 40-column grid, and pages you reach with coloured keys.",
+  "note": "Live: running clock, scanlines, a stepped wipe when a page changes, fastext keys.",
+  "fonts": [
+    "VT323"
+  ],
+  "borrowed": "1970s–90s broadcast teletext (Ceefax, Oracle and their cousins): 40×25 character pages, double-height headlines, chunky block \"mosaic\" graphics, the four coloured Fastext keys on the remote.",
+  "mood": "Nostalgic, cheeky, information-dense. Suits media, retro-tech, game studios, dev portfolios with a sense of humour.",
+  "palette": [
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "role": "screen"
+    },
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "role": "body"
+    },
+    {
+      "name": "Yellow",
+      "hex": "#FFFF00",
+      "role": "headlines"
+    },
+    {
+      "name": "Cyan",
+      "hex": "#00FFFF",
+      "role": "graphics, info"
+    },
+    {
+      "name": "Green",
+      "hex": "#00FF00",
+      "role": "secondary"
+    },
+    {
+      "name": "Red",
+      "hex": "#FF0000",
+      "role": "fastext 1"
+    },
+    {
+      "name": "Blue",
+      "hex": "#0000FF",
+      "role": "header band"
+    },
+    {
+      "name": "Magenta",
+      "hex": "#FF00FF",
+      "role": "accents"
+    }
+  ],
+  "type": [
+    {
+      "sample": "P100 LABTEXT 100",
+      "style": "font-family:'VT323';font-size:38px",
+      "meta": "Everything · VT323, one size; double-height via scaleY(2)"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:repeating-linear-gradient(180deg,transparent 0 2px,rgba(0,0,0,.35) 3px), linear-gradient(90deg,#0000FF 0 50%,#FF0000 50%)",
+      "label": "Scanlines over colour"
+    },
+    {
+      "css": "background:conic-gradient(#00FFFF 25%, #000 0 50%, #00FFFF 0 75%, #000 0) 0 0/24px 16px",
+      "label": "Mosaic block cells (2×3)"
+    }
+  ],
+  "motion": [
+    "Page change: `clip-path` wipe with `steps(3)`, so it looks like the page is being redrawn.",
+    "A clock that actually ticks in the header.",
+    "Fastext keys map to the four colours; type page numbers for power users."
+  ],
+  "watchouts": [
+    "A fixed 40-column grid doesn't reflow. Scale the font size with the viewport instead.",
+    "Pure blue (#0000FF) text on black fails contrast. Use it only as a background band.",
+    "Give screen readers real text alongside the mosaic art."
+  ],
+  "tokens": "black #000  white #FFF  yellow #FF0  cyan #0FF  green #0F0  red #F00  blue #00F  magenta #F0F\nfont: 'VT323', monospace;  line-height: 0.92em;  white-space: pre;  width: 40ch"
+}

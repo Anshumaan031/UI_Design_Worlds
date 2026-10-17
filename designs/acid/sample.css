@@ -1,0 +1,24 @@
+.ac-s { --void: #07070A; --acid: #C6FF00; --hot: #FF2BD6; --mx: 0; --my: 0; background: radial-gradient(ellipse 70% 42% at 50% 64%, rgba(255, 43, 214, 0.42), transparent 70%), var(--void); color: #F2F2F2; font-family: 'IBM Plex Mono', monospace; min-height: 440px; padding: 26px clamp(16px, 4vw, 44px) 32px; display: grid; grid-template-rows: auto 1fr auto; gap: 18px; perspective: 900px; }
+.ac-s__floor { position: absolute; z-index: -1; left: -60%; right: -60%; bottom: -2%; height: 50%; background: linear-gradient(var(--acid) 2px, transparent 2px) 0 0 / 100% 46px, linear-gradient(90deg, var(--acid) 2px, transparent 2px) 50% 0 / 46px 100%; transform: rotateX(70deg); transform-origin: 50% 100%; opacity: 0.55; -webkit-mask: linear-gradient(transparent, #000 55%); mask: linear-gradient(transparent, #000 55%); animation: acRun 900ms linear infinite; }
+@keyframes acRun { to { background-position: 0 46px, 50% 0; } }
+.ac-s__top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 20px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--acid); }
+.ac-s__title {
+  margin: 0; align-self: center; justify-self: center; text-align: center;
+  font: 900 clamp(30px, 8.4vw, 104px)/0.86 'Unbounded', sans-serif; letter-spacing: -0.06em; text-transform: uppercase;
+  color: transparent; -webkit-background-clip: text; background-clip: text;
+  background-image: radial-gradient(circle at calc(50% + var(--mx) * 120%) calc(35% + var(--my) * 120%), #fff 0 5%, transparent 24%), linear-gradient(176deg, #FFFFFF 0 16%, #A7B0C2 38%, #232733 49%, #F4F7FF 52%, #8E97AB 72%, #FFFFFF 100%);
+  filter: drop-shadow(0 5px 0 var(--hot)) drop-shadow(0 0 22px rgba(255, 43, 214, 0.5));
+  transform: rotateY(calc(var(--mx) * 22deg)) rotateX(calc(var(--my) * -16deg)); transition: transform 120ms linear;
+}
+.ac-s__title span { display: block; }
+.ac-s__badge { position: absolute; z-index: 2; top: 52px; right: clamp(12px, 5vw, 56px); width: 112px; height: 112px; border-radius: 50%; background: var(--acid); color: var(--void); display: grid; place-items: center; rotate: 12deg; }
+.ac-s__badge svg { position: absolute; inset: 0; width: 100%; height: 100%; animation: acSpin 9s linear infinite; }
+.ac-s__badge text { font: 700 10.5px 'IBM Plex Mono', monospace; letter-spacing: 0.2em; fill: var(--void); }
+.ac-s__badge b { font: 900 24px 'Unbounded', sans-serif; letter-spacing: -0.04em; }
+@keyframes acSpin { to { rotate: 360deg; } }
+.ac-s__bill { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.ac-s__bill span { padding: 6px 12px; border: 1.5px solid var(--acid); color: var(--acid); border-radius: 999px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; background: rgba(7, 7, 10, 0.7); transition: background 150ms, color 150ms; }
+.ac-s__bill span:hover { background: var(--acid); color: var(--void); }
+.ac-s__bill span.hot { border-color: var(--hot); color: var(--hot); }
+.ac-s__bill span.hot:hover { background: var(--hot); color: var(--void); }
+@media (max-width: 600px) { .ac-s__badge { width: 80px; height: 80px; top: 70px; } .ac-s__badge b { font-size: 17px; } .ac-s__badge text { font-size: 9px; } }

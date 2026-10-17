@@ -1,0 +1,107 @@
+{
+  "id": "receiver",
+  "name": "Receiver",
+  "status": "built",
+  "tone": "dark",
+  "play": "high",
+  "fit": "Storytellers, podcasts, warm personal brands",
+  "use": [
+    "Editorial",
+    "Music & culture"
+  ],
+  "feel": [
+    "Warm",
+    "Playful",
+    "Retro"
+  ],
+  "keywords": "radio valve walnut podcast vintage tuning dial brass",
+  "idea": "A walnut valve radio in a dark room. Content items are stations on the dial; between them the signal breaks into static, and the magic eye closes as you lock on.",
+  "note": "Live: drag across the dial (it's a native range input underneath, so keyboard arrows work). Watch the station name break up and the green eye open between stations.",
+  "fonts": [
+    "Barlow+Condensed:wght@400;500;600;700",
+    "Barlow:wght@400;500;600",
+    "Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900"
+  ],
+  "borrowed": "1950s tabletop valve radios: arched walnut cabinets, woven speaker cloth with brass threads, backlit cream dial glass, a red needle, piano-key preset buttons, the green \"magic eye\" tuning tube, and the studio ON AIR sign.",
+  "mood": "Warm, intimate, after-hours. Suits storytellers, podcasts, writers, music, and personal brands that want warmth instead of tech gloss.",
+  "palette": [
+    {
+      "name": "Night",
+      "hex": "#120C08",
+      "role": "room"
+    },
+    {
+      "name": "Walnut",
+      "hex": "#6A3E22",
+      "role": "cabinet"
+    },
+    {
+      "name": "Brass",
+      "hex": "#E6C27A",
+      "role": "lettering, rims"
+    },
+    {
+      "name": "Dial cream",
+      "hex": "#F3E4C0",
+      "role": "glass, text"
+    },
+    {
+      "name": "Valve amber",
+      "hex": "#FFB648",
+      "role": "glow, numerals"
+    },
+    {
+      "name": "Needle red",
+      "hex": "#E2321F",
+      "role": "needle, ON AIR"
+    },
+    {
+      "name": "Magic eye",
+      "hex": "#5CF29A",
+      "role": "tuning signal"
+    }
+  ],
+  "type": [
+    {
+      "sample": "Receiver",
+      "style": "font-family:'Fraunces';font-style:italic;font-weight:800;font-size:44px;color:#B88A3A",
+      "meta": "Display · Fraunces italic 800, opsz 144"
+    },
+    {
+      "sample": "88 · 92 · 96 · 100 MHz",
+      "style": "font-family:'Barlow Condensed';font-weight:700;font-size:30px",
+      "meta": "Dial & labels · Barlow Condensed 600–700, tabular numerals"
+    },
+    {
+      "sample": "Programme notes in plain Barlow.",
+      "style": "font-family:'Barlow';font-size:19px",
+      "meta": "Body · Barlow"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:repeating-linear-gradient(45deg,rgba(230,194,122,.2) 0 2px,transparent 2px 10px),repeating-linear-gradient(-45deg,rgba(230,194,122,.15) 0 2px,transparent 2px 10px),linear-gradient(#4C3320,#2E1E12)",
+      "label": "Grille cloth weave"
+    },
+    {
+      "css": "background:repeating-linear-gradient(91deg,rgba(0,0,0,.12) 0 2px,transparent 2px 7px,rgba(255,220,180,.05) 7px 9px,transparent 9px 16px),repeating-linear-gradient(88deg,transparent 0 40px,rgba(0,0,0,.14) 40px 43px,transparent 43px 90px),linear-gradient(#7A4727,#3B2213)",
+      "label": "Walnut grain"
+    },
+    {
+      "css": "background:repeating-conic-gradient(rgba(0,0,0,.35) 0 4deg,transparent 4deg 10deg) 50% 50%/70px 70px no-repeat,radial-gradient(circle at 40% 32%,#F2DFB4,#B98F4E 55%,#6E4E22) 50% 50%/70px 70px no-repeat,#2E1E12;",
+      "label": "Knurled brass knob"
+    }
+  ],
+  "motion": [
+    "Clarity = (1 − distance to nearest station / 1.1)²; drives text garble, static opacity, dial glow and the eye.",
+    "Warm-up sweep on load: the needle runs the band and settles on station 1 (2.6s cubic-out).",
+    "Static: tiny canvas of noise scaled up with `image-rendering: pixelated`.",
+    "Optional audio: band-passed hiss crossfades into a tremolo chord."
+  ],
+  "watchouts": [
+    "The dial must stay a real slider (role or native range) with a spoken value that includes the station name.",
+    "Garbled text flickers. Stop the flicker under reduced motion.",
+    "Brass on walnut is low contrast. Keep it for big display text only."
+  ],
+  "tokens": "--night: #120C08;  --wood: #6A3E22;  --brass: #E6C27A;  --cream: #F3E4C0;  --amber: #FFB648;  --red: #E2321F;  --eye: #5CF29A;\n--serif: 'Fraunces', serif;  --cond: 'Barlow Condensed', sans-serif;  --sans: 'Barlow', sans-serif;\nglow: 0 0 calc(10px + 40px * var(--c)) rgba(255,170,60, calc(.15 + .45 * var(--c)))   /* --c = clarity 0..1 */"
+}

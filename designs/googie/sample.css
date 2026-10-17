@@ -1,0 +1,49 @@
+.gg-s { --sky: #FFF1D6; --teal: #1FB5AC; --coral: #FF5A3C; --mustard: #FFB81C; --pink: #FF8FB1; --ink: #1E2A3A; --cream: #FFF1D6; --bulb: #FFF6C9; --bulb-off: #157F79; background: var(--sky); color: var(--ink); font-family: 'Josefin Sans', sans-serif; min-height: 480px; padding: 36px clamp(16px, 4vw, 52px); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px; align-items: center; transition: background-color 800ms, color 800ms; }
+.gg-s.dusk { --sky: #13233A; --ink: #FFF1D6; }
+.gg-s__burst { position: absolute; z-index: -1; width: 560px; left: -150px; top: -170px; animation: ggSpin 60s linear infinite; }
+.gg-s__burst polygon { fill: var(--mustard); opacity: 0.55; transition: fill 800ms, opacity 800ms; }
+.gg-s.dusk .gg-s__burst polygon { fill: #24406A; opacity: 1; }
+@keyframes ggSpin { to { rotate: 360deg; } }
+.gg-s__spark { position: absolute; z-index: -1; width: var(--s, 22px); aspect-ratio: 1; background: var(--coral); clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%); transition: background 800ms, filter 800ms; }
+.gg-s.dusk .gg-s__spark { background: var(--bulb); filter: drop-shadow(0 0 6px var(--bulb)); }
+.gg-s__boom { position: absolute; z-index: -1; width: 120px; }
+.gg-s__boom path { fill: var(--pink); }
+.gg-s__boom--b path { fill: var(--teal); }
+.gg-s__sput { position: absolute; z-index: -1; width: 90px; right: 40%; bottom: 26px; }
+.gg-s__sput line { stroke: var(--ink); stroke-width: 2.5; transition: stroke 800ms; }
+.gg-s__sput circle { fill: var(--coral); }
+.gg-s__label { margin: 0; font-weight: 700; font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--teal); }
+.gg-s h4 { margin: 12px 0 0; font: 400 clamp(44px, 6.6vw, 86px)/0.92 'Shrikhand', serif; color: var(--coral); letter-spacing: -0.01em; }
+.gg-s h4 span { display: block; color: var(--teal); }
+.gg-s__lede { margin: 16px 0 0; font-size: 18px; max-width: 34ch; }
+.gg-s__btn { margin-top: 22px; appearance: none; border: 0; border-radius: 999px 999px 999px 8px; padding: 13px 24px 11px; background: var(--coral); color: var(--cream); font: 700 14px 'Josefin Sans', sans-serif; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; box-shadow: 0 5px 0 #B8381F; transition: translate 100ms, box-shadow 100ms; }
+.gg-s__btn:hover { translate: 0 -2px; box-shadow: 0 7px 0 #B8381F; }
+.gg-s__btn:active { translate: 0 4px; box-shadow: 0 1px 0 #B8381F; }
+.gg-s__post { justify-self: center; display: grid; justify-items: center; width: min(360px, 100%); }
+.gg-s__atom { width: 120px; margin-bottom: -10px; overflow: visible; animation: ggSpin 24s linear infinite; }
+.gg-s__atom ellipse { fill: none; stroke: var(--ink); stroke-width: 2.5; transition: stroke 800ms; }
+.gg-s__atom .nuc { fill: var(--coral); }
+.gg-s__atom .el { fill: var(--teal); }
+.gg-s.dusk .gg-s__atom ellipse { stroke: var(--bulb); filter: drop-shadow(0 0 3px var(--bulb)); }
+.gg-s__sign { position: relative; width: 100%; padding: 26px 22px 24px; background: var(--teal); color: var(--cream); border: 5px solid var(--cream); border-radius: 46px 10px 46px 10px; rotate: -4deg; box-shadow: 12px 12px 0 var(--coral); text-align: center; transition: box-shadow 800ms; }
+.gg-s__sign b { display: block; font: 400 clamp(46px, 7vw, 68px)/1 'Shrikhand', serif; transition: text-shadow 800ms; }
+.gg-s__sign small { display: block; margin-top: 8px; font-weight: 700; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; }
+.gg-s.dusk .gg-s__sign { box-shadow: 12px 12px 0 #8A2A18, 0 0 40px rgba(31, 181, 172, 0.55); }
+.gg-s.dusk .gg-s__sign b { text-shadow: 0 0 6px #FFF6C9, 0 0 22px rgba(255, 246, 201, 0.75); }
+.gg-s__bulbs { position: absolute; left: 22px; right: 22px; height: 14px; background: radial-gradient(circle at 9px 50%, var(--bulb) 0 3.5px, transparent 4.5px) 0 0 / 36px 100%, radial-gradient(circle at 27px 50%, var(--bulb-off) 0 3.5px, transparent 4.5px) 0 0 / 36px 100%; animation: ggChase 700ms steps(2) infinite; }
+.gg-s__bulbs { top: 6px; } .gg-s__bulbs--b { top: auto; bottom: 6px; animation-direction: reverse; }
+.gg-s.dusk .gg-s__bulbs { filter: drop-shadow(0 0 4px var(--bulb)); animation-duration: 350ms; }
+@keyframes ggChase { to { background-position: 36px 0, 36px 0; } }
+.gg-s__vac { margin-top: 18px; padding: 6px 16px 3px; border: 3px solid rgba(255, 143, 177, 0.5); border-radius: 10px; font: 700 22px 'Josefin Sans', sans-serif; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(214, 107, 140, 0.55); transition: color 600ms, border-color 600ms, text-shadow 600ms, box-shadow 600ms; }
+.gg-s.dusk .gg-s__vac { color: #FFC2D6; border-color: var(--pink); text-shadow: 0 0 6px var(--pink), 0 0 20px #FF3E7F; box-shadow: 0 0 14px rgba(255, 62, 127, 0.7), inset 0 0 10px rgba(255, 62, 127, 0.5); }
+.gg-s__pole { display: block; width: 18px; height: 70px; background: linear-gradient(90deg, #8A939D, #E6EAEE 45%, #7D8690); }
+@media (max-width: 760px) { .gg-s { grid-template-columns: 1fr; } .gg-s__sput { display: none; } }
+
+/* motion off: every sample has a still state that still reads */
+@media (prefers-reduced-motion: reduce) {
+  .bd-s__led i, .bd-s__pulse, .hv-s__tape, .rz-s__badge, .tt-s__body, .bp-s__dim .draw, .zd-s, .zd-s__role i { animation: none !important; }
+  .ac-s__floor, .ac-s__badge svg, .rn-s__l, .ab-s__snow, .ab-s__jelly, .ab-s__jelly .tent, .ab-s__angler .lure, .ab-s__p, .gg-s__burst, .gg-s__atom, .gg-s__bulbs { animation: none !important; }
+  .ac-s__title { transition: none; }
+  .bp-s__dim .draw { stroke-dashoffset: 0; }
+  html { scroll-behavior: auto; }
+}

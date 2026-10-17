@@ -1,0 +1,91 @@
+{
+  "id": "riso",
+  "name": "Overprint",
+  "status": "built",
+  "tone": "light",
+  "play": "medium",
+  "fit": "Designers, studios, culture, editorial",
+  "use": [
+    "Studio / agency",
+    "Music & culture",
+    "Editorial"
+  ],
+  "feel": [
+    "Playful",
+    "Loud",
+    "Warm"
+  ],
+  "keywords": "risograph print overprint zine pink blue halftone",
+  "idea": "A two-drum risograph zine: medium blue and fluorescent pink on newsprint. Inks multiply where they overlap, and the drums drift out of register.",
+  "note": "Live: pointer-driven misregistration, multiply blending, dot-screen mask, spinning badge, highlighter swipe, misregistered button.",
+  "fonts": [
+    "Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800",
+    "Instrument+Serif:ital@0;1"
+  ],
+  "borrowed": "Risograph printing as used in zines and gig posters: spot-colour drums printed one at a time, halftone screens, paper tooth, colours that multiply where they overlap, and imperfect registration.",
+  "mood": "Warm, crafted, indie, a little punk. Suits designers, studios, cultural events, editorial and newsletters.",
+  "palette": [
+    {
+      "name": "Newsprint",
+      "hex": "#F2EDE3",
+      "role": "paper"
+    },
+    {
+      "name": "Medium Blue",
+      "hex": "#0078BF",
+      "role": "drum 1"
+    },
+    {
+      "name": "Fluo Pink",
+      "hex": "#FF48B0",
+      "role": "drum 2"
+    },
+    {
+      "name": "Federal Blue",
+      "hex": "#2E4A7D",
+      "role": "body text (7:1)"
+    },
+    {
+      "name": "Yellow",
+      "hex": "#FFE800",
+      "role": "stickers only"
+    }
+  ],
+  "type": [
+    {
+      "sample": "Back issues",
+      "style": "font-family:'Bricolage Grotesque';font-variation-settings:'opsz' 96,'wdth' 75;font-weight:800;font-size:42px;text-transform:uppercase;letter-spacing:-.03em",
+      "meta": "Display · Bricolage Grotesque, opsz 96, wdth 75, 800"
+    },
+    {
+      "sample": "a zine about shipping things",
+      "style": "font-family:'Instrument Serif';font-style:italic;font-size:30px",
+      "meta": "Voice · Instrument Serif, italic for asides"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:radial-gradient(circle,#FF48B0 40%,transparent 44%) 0 0/7px 7px, #F2EDE3",
+      "label": "Halftone dot screen"
+    },
+    {
+      "css": "background:linear-gradient(#0078BF,#0078BF) 20% 30%/55% 50% no-repeat, linear-gradient(#FF48B0,#FF48B0) 70% 70%/55% 50% no-repeat, #F2EDE3;background-blend-mode:multiply",
+      "label": "Multiply overlap"
+    },
+    {
+      "css": "background-image:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.42  0 0 0 0 0.38  0 0 0 0.9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\");background-color:#F2EDE3;background-blend-mode:multiply",
+      "label": "Paper grain (SVG noise)"
+    }
+  ],
+  "motion": [
+    "Title prints in two passes (clip-path), pink lands slightly later.",
+    "Pointer position offsets the pink layer: `translate(calc(6px + var(--mx) * 22px), …)`.",
+    "Canvas halftone of photos at 15° (blue) and 75° (pink) screen angles."
+  ],
+  "watchouts": [
+    "Pink and medium blue are both too light for body text. Body goes in Federal Blue.",
+    "Grain overlay must be `pointer-events: none` and low opacity.",
+    "Two inks maximum per spread. A third ink becomes clip art."
+  ],
+  "tokens": "--paper: #F2EDE3;  --blue: #0078BF;  --pink: #FF48B0;  --navy: #2E4A7D;  --yellow: #FFE800;\n--display: 'Bricolage Grotesque', sans-serif;  --serif: 'Instrument Serif', serif;\n.ink { mix-blend-mode: multiply }  .screen { mask: radial-gradient(circle, #000 58%, transparent 62%) 0 0 / 5px 5px }"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "sumi",
+  "name": "Sumi Tea House",
+  "status": "built",
+  "tone": "light",
+  "play": "high",
+  "fit": "Tea and sake houses, ceramics, ryokan and wellness, meditation and slow-craft brands",
+  "use": ["Local business", "Commerce / pricing", "Portfolio"],
+  "feel": ["Calm", "Warm", "Severe"],
+  "keywords": "japanese sumi ink enso brush tea ceremony cinnabar hanko vertical shippori mincho zen minimal wabi",
+  "idea": "A tea house menu as a single brushstroke: one ink enso is the timer, the type is a heavy Mincho, and a cinnabar hanko seal is stamped only when the cup is ready.",
+  "note": "Live: choose a tea, then Begin steeping. The ensō closes as the leaves steep (demo speed, 12×), and the red seal is stamped when it is ready.",
+  "fonts": ["Shippori Mincho:wght@400;500;800", "Zen Kaku Gothic New:wght@400;500"],
+  "borrowed": "Sumi-e brush circles, hanko vermilion seals, vertical tategaki headings, washi paper, and the printed menu of a Kyoto tea room.",
+  "mood": "Still, warm and deliberate. Big heavy serif, a lot of paper, and exactly one colour doing the work. Suits places that want to feel unhurried. Avoid for anything urgent or transactional: the pace is part of the design.",
+  "palette": [
+    { "name": "Washi", "hex": "#EFE8DA", "role": "background" },
+    { "name": "Sumi ink", "hex": "#14110F", "role": "text, enso, selected row" },
+    { "name": "Cinnabar", "hex": "#C8321E", "role": "the one accent: seal, vertical text, button" },
+    { "name": "Ash", "hex": "#5E574C", "role": "secondary text" }
+  ],
+  "type": [
+    { "sample": "Slow down", "style": "font-family:'Shippori Mincho';font-weight:800;font-size:44px", "meta": "Display · Shippori Mincho 800" },
+    { "sample": "一期一会", "style": "font-family:'Shippori Mincho';font-weight:800;font-size:32px;letter-spacing:.2em", "meta": "Vertical accent · Shippori Mincho 800, writing-mode: vertical-rl" },
+    { "sample": "Green · 80°C · 1:30", "style": "font-family:'Zen Kaku Gothic New';font-size:13px;letter-spacing:.08em", "meta": "UI · Zen Kaku Gothic New 400" }
+  ],
+  "patterns": [
+    { "css": "background:radial-gradient(ellipse at 30% 40%,#F6F0E3,#EFE8DA 70%)", "label": "Washi glow" },
+    { "css": "background:radial-gradient(circle,transparent 0 52%,#14110F 53% 72%,transparent 73%),#EFE8DA", "label": "Enso ring" }
+  ],
+  "motion": ["The ensō draws in over 2.2s with `stroke-dashoffset`, `cubic-bezier(.22,1,.36,1)`.", "Steeping redraws the ring from nothing as it fills; the ring is the progress, so no separate bar.", "The seal stamps in from 1.9× scale in 600ms."],
+  "watchouts": ["The brush edge is an SVG turbulence filter. Keep it on a single element or it gets expensive.", "Cinnabar once per view. A second red thing and the seal stops meaning anything.", "Do not set the Japanese in tracked caps; it is only tracked when vertical."],
+  "tokens": "--paper: #EFE8DA;  --ink: #14110F;  --cinnabar: #C8321E;  --ash: #5E574C;\n--serif: 'Shippori Mincho', serif;  --sans: 'Zen Kaku Gothic New', sans-serif;"
+}

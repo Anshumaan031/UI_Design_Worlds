@@ -1,0 +1,75 @@
+{
+  "id": "receipt",
+  "name": "Thermal Receipt",
+  "status": "proposed",
+  "tone": "light",
+  "play": "medium",
+  "fit": "Pricing pages, shops, résumés, year-in-review",
+  "use": [
+    "Commerce / pricing",
+    "Portfolio"
+  ],
+  "feel": [
+    "Playful",
+    "Retro",
+    "Calm"
+  ],
+  "keywords": "till receipt thermal paper pricing invoice shop",
+  "idea": "Content prints out on a till roll: a narrow monospaced column, dashed dividers, a torn zigzag edge, a barcode, and a total that lands last.",
+  "note": "Live: press \"Print receipt\" and the lines print one by one, ending with the total and a barcode.",
+  "fonts": [
+    "IBM+Plex+Mono:wght@400;600"
+  ],
+  "borrowed": "Thermal till receipts and order tickets: 58/80mm paper rolls, dot-matrix monospace, dashed separators, centred shop headers, item/price columns, barcodes, torn edges, the faded grey of thermal print.",
+  "mood": "Honest, itemised, witty. Suits pricing pages, shops, \"CV as a receipt\", year-in-review and changelog pages. Monospace is earned here: it's what receipts are printed in.",
+  "palette": [
+    {
+      "name": "Counter",
+      "hex": "#D7D2C8",
+      "role": "page"
+    },
+    {
+      "name": "Thermal paper",
+      "hex": "#FBFAF6",
+      "role": "roll"
+    },
+    {
+      "name": "Thermal ink",
+      "hex": "#2A2A2A",
+      "role": "text, barcode"
+    },
+    {
+      "name": "Total red",
+      "hex": "#C8302C",
+      "role": "the total only"
+    }
+  ],
+  "type": [
+    {
+      "sample": "SYSTEMS &amp; CO.",
+      "style": "font-family:'IBM Plex Mono';font-size:22px;font-weight:600;letter-spacing:.2em",
+      "meta": "Everything · IBM Plex Mono 400/600; headers tracked +0.2em"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:repeating-linear-gradient(90deg,#2A2A2A 0 2px,transparent 2px 4px,#2A2A2A 4px 7px,transparent 7px 8px,#2A2A2A 8px 9px,transparent 9px 12px) 50% 50%/80% 50% no-repeat,#FBFAF6",
+      "label": "Barcode (gradient)"
+    },
+    {
+      "css": "background:#FBFAF6;-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%",
+      "label": "Torn zigzag edge (mask)"
+    }
+  ],
+  "motion": [
+    "Lines print at ~110ms intervals, each dropping 6px into place (print-head rhythm).",
+    "The roll grows downwards; the page scroll follows it.",
+    "Idea: a \"Tear off\" button that animates a rip and copies the content."
+  ],
+  "watchouts": [
+    "Keep the column narrow (≈ 32–42 characters) or it stops reading as a receipt.",
+    "Item/price rows must stay real text, not ASCII art, for screen readers.",
+    "Faded grey thermal ink fails contrast. Keep the ink near #2A2A2A."
+  ],
+  "tokens": "--counter: #D7D2C8;  --paper: #FBFAF6;  --ink: #2A2A2A;  --red: #C8302C;\n--mono: 'IBM Plex Mono', monospace;   width: min(340px, 100%)\ntorn edge: mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 14px 100%"
+}

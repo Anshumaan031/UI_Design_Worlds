@@ -1,0 +1,5 @@
+/* Every class starts with the design's prefix (xx-) so styles never leak into the gallery or other designs. */
+.xx-s { --ground: #F4F1EA; --ink: #161613; --signal: #E5484D; background: var(--ground); color: var(--ink); font-family: 'Inter', sans-serif; padding: 36px; }
+.xx-s h4 { margin: 0; font-size: clamp(36px, 6vw, 72px); line-height: 1; letter-spacing: -0.03em; }
+.xx-s__btn { margin-top: 20px; padding: 12px 20px; border: 0; background: var(--ink); color: var(--ground); font: 600 15px 'Inter', sans-serif; cursor: pointer; }
+.xx-s__btn:hover { background: var(--signal); }

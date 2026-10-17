@@ -1,0 +1,83 @@
+{
+  "id": "transit",
+  "name": "Transit Map",
+  "status": "proposed",
+  "tone": "light",
+  "play": "medium",
+  "fit": "Timelines, roadmaps, career paths, onboarding",
+  "use": [
+    "Roadmap / timeline"
+  ],
+  "feel": [
+    "Precise",
+    "Playful"
+  ],
+  "keywords": "subway metro map wayfinding signage line diagram stations",
+  "idea": "Wayfinding signage and schematic line diagrams. Each career phase or product track is a coloured line, each milestone a station, and a train moves through it.",
+  "note": "Live: a train runs the green line; stations grow and announce themselves on hover or keyboard focus.",
+  "fonts": [
+    "Overpass:wght@400..900"
+  ],
+  "borrowed": "Schematic metro maps (Harry Beck's London Underground diagram, Vignelli's New York map) and transit wayfinding: 45°/90° lines, white station ticks, interchange rings, round line bullets, black signage bands.",
+  "mood": "Clear, systematic, friendly. Suits timelines, roadmaps, career paths, onboarding flows, multi-track programmes, and conference schedules.",
+  "palette": [
+    {
+      "name": "Map white",
+      "hex": "#FFFFFF",
+      "role": "background"
+    },
+    {
+      "name": "Sign black",
+      "hex": "#1B1B1B",
+      "role": "signage, text"
+    },
+    {
+      "name": "Line green",
+      "hex": "#009B3A",
+      "role": "track 1"
+    },
+    {
+      "name": "Line orange",
+      "hex": "#F08A00",
+      "role": "track 2"
+    },
+    {
+      "name": "Line purple",
+      "hex": "#7D3F98",
+      "role": "track 3"
+    },
+    {
+      "name": "Line blue",
+      "hex": "#0074C8",
+      "role": "track 4"
+    }
+  ],
+  "type": [
+    {
+      "sample": "Platform 2 · Northbound",
+      "style": "font-family:'Overpass';font-weight:800;font-size:32px",
+      "meta": "Everything · Overpass 400–900 (Highway Gothic lineage)"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:linear-gradient(#009B3A,#009B3A) 0 50%/100% 10px no-repeat,linear-gradient(#F08A00,#F08A00) 50% 0/10px 100% no-repeat,radial-gradient(circle,#fff 0 8px,#1B1B1B 8px 11px,transparent 11px) 50% 50%/40px 40px no-repeat,#fff",
+      "label": "Interchange ring"
+    },
+    {
+      "css": "background:linear-gradient(#1B1B1B,#1B1B1B) 0 30%/100% 28px no-repeat,radial-gradient(circle,#009B3A 0 11px,transparent 12px) 18px calc(30% + 0px)/28px 28px no-repeat,#fff",
+      "label": "Signage band + bullet"
+    }
+  ],
+  "motion": [
+    "Train: SVG `animateMotion` along the line path, slow and steady (7s).",
+    "Stations: hover/focus enlarges the tick and announces the stop in a live region.",
+    "Idea: scroll progress drives the train between stations (one section = one stop)."
+  ],
+  "watchouts": [
+    "Lines only at 0°, 45° and 90°. Free curves break the schematic.",
+    "Line colours alone don't carry meaning: always pair with a letter bullet.",
+    "Orange text on white fails contrast; orange is for lines, never words."
+  ],
+  "tokens": "--bg: #FFFFFF;  --ink: #1B1B1B;  --green: #009B3A;  --orange: #F08A00;  --purple: #7D3F98;  --blue: #0074C8;\n--sans: 'Overpass', sans-serif;   line stroke: 10px round caps;  station: r 7, white fill, 3px ink stroke"
+}

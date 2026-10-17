@@ -1,0 +1,18 @@
+.rz-s { --paper: #F2EDE3; --blue: #0078BF; --navy: #2E4A7D; --pink: #FF48B0; --yellow: #FFE800; --mx: 0; --my: 0; background: var(--paper); color: var(--navy); font-family: 'Bricolage Grotesque', sans-serif; padding: 36px clamp(20px, 4vw, 48px); display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr); gap: 28px; align-items: center; }
+.rz-s::after { content: ''; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: multiply; opacity: 0.35; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.42  0 0 0 0 0.38  0 0 0 0.9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+.rz-s__title { display: grid; margin: 0; font-weight: 800; font-variation-settings: 'opsz' 96, 'wdth' 75; font-size: clamp(56px, 10vw, 128px); line-height: 0.8; letter-spacing: -0.035em; text-transform: uppercase; }
+.rz-s__title span { grid-area: 1 / 1; mix-blend-mode: multiply; }
+.rz-s__title span:first-child { color: var(--blue); }
+.rz-s__title span:last-child { color: var(--pink); transform: translate(calc(6px + var(--mx) * 22px), calc(4px + var(--my) * 16px)); transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1); -webkit-mask: radial-gradient(circle, #000 58%, transparent 62%) 0 0 / 5px 5px; mask: radial-gradient(circle, #000 58%, transparent 62%) 0 0 / 5px 5px; }
+.rz-s__copy { margin: 18px 0 0; font-family: 'Instrument Serif', serif; font-size: 24px; line-height: 1.25; max-width: 30ch; }
+.rz-s__mark { background: linear-gradient(var(--pink), var(--pink)) 0 85% / 0% 40% no-repeat; transition: background-size 600ms cubic-bezier(0.16, 1, 0.3, 1); mix-blend-mode: multiply; }
+.rz-s__copy:hover .rz-s__mark { background-size: 100% 40%; }
+.rz-s__side { display: grid; gap: 18px; justify-items: center; }
+.rz-s__badge { width: 140px; height: 140px; animation: rzSpin 18s linear infinite; }
+.rz-s__badge text { font: 700 13px 'Bricolage Grotesque', sans-serif; letter-spacing: 0.2em; fill: var(--blue); text-transform: uppercase; }
+@keyframes rzSpin { to { rotate: 360deg; } }
+.rz-s__btn { position: relative; display: inline-block; padding: 14px 22px; background: var(--blue); color: var(--paper); font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; border-radius: 2px; isolation: isolate; }
+.rz-s__btn::before { content: ''; position: absolute; inset: 0; z-index: -1; background: var(--pink); mix-blend-mode: multiply; translate: 5px 4px; transition: translate 300ms cubic-bezier(0.16, 1, 0.3, 1); }
+.rz-s__btn:hover::before { translate: -4px -3px; }
+.rz-s__sticker { padding: 8px 14px; background: var(--yellow); color: var(--navy); font-weight: 700; rotate: 4deg; box-shadow: 0 2px 6px rgba(46, 74, 125, 0.25); }
+@media (max-width: 700px) { .rz-s { grid-template-columns: 1fr; } }

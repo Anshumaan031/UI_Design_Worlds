@@ -1,0 +1,116 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "b612",
+        "createdAt": "2026-10-10T10:48:05.764Z",
+        "reason": "agent: dev-only lab exploring replacement worlds (lab.html, lab/), not the shipped design system"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "b612 mono",
+        "createdAt": "2026-10-10T10:48:05.930Z",
+        "reason": "agent: dev-only lab exploring replacement worlds (lab.html, lab/), not the shipped design system"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "chakra petch",
+        "createdAt": "2026-10-10T10:48:06.060Z",
+        "reason": "agent: dev-only lab exploring replacement worlds (lab.html, lab/), not the shipped design system"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "barlow condensed",
+        "createdAt": "2026-10-10T10:48:06.171Z",
+        "reason": "agent: dev-only lab exploring replacement worlds (lab.html, lab/), not the shipped design system"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "barlow",
+        "createdAt": "2026-10-10T10:48:06.293Z",
+        "reason": "agent: dev-only lab exploring replacement worlds (lab.html, lab/), not the shipped design system"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "vt323",
+        "createdAt": "2026-10-10T10:48:06.414Z",
+        "reason": "agent: dev-only lab exploring replacement worlds (lab.html, lab/), not the shipped design system"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "big shoulders stencil display",
+        "createdAt": "2026-10-10T12:00:00.000Z",
+        "reason": "agent: dev-only lab variant D"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "archivo",
+        "createdAt": "2026-10-10T12:00:00.000Z",
+        "reason": "agent: dev-only lab variant D"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "bricolage grotesque",
+        "createdAt": "2026-10-10T12:00:00.000Z",
+        "reason": "agent: dev-only lab variant E"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "instrument serif",
+        "createdAt": "2026-10-10T12:00:00.000Z",
+        "reason": "agent: dev-only lab variant E"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "doto",
+        "createdAt": "2026-10-10T12:00:00.000Z",
+        "reason": "agent: dev-only lab variant F"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "geist",
+        "createdAt": "2026-10-10T12:00:00.000Z",
+        "reason": "agent: dev-only lab variant F"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "geist mono",
+        "createdAt": "2026-10-10T12:00:00.000Z",
+        "reason": "agent: dev-only lab variant F"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "fraunces",
+        "createdAt": "2026-10-10T13:00:00.000Z",
+        "reason": "agent: dev-only lab variant G"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "unbounded",
+        "createdAt": "2026-10-10T13:00:00.000Z",
+        "reason": "agent: dev-only lab variant H"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "hanken grotesk",
+        "createdAt": "2026-10-10T13:00:00.000Z",
+        "reason": "agent: dev-only lab variant H"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "inter",
+        "createdAt": "2026-10-11T19:20:37.163Z",
+        "reason": "Legacy Swiss pages (Work, Skillsets, Projects, Contact) still use Inter until they are converted to the drawing set; DESIGN.md records this migration. Remove once conversion is done."
+      },
+      {
+        "rule": "design-system-font",
+        "value": "condensed",
+        "createdAt": "2026-10-11T19:29:19.352Z",
+        "reason": "Detector reads 'condensed' out of the 'Barlow Condensed' font shorthand; Barlow Condensed is the documented display face"
+      }
+    ]
+  }
+}

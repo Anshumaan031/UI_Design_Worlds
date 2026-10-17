@@ -1,0 +1,130 @@
+{
+  "id": "zurich",
+  "name": "Zurich Dossier",
+  "status": "built",
+  "tone": "light",
+  "play": "low",
+  "fit": "Consultants, case-study portfolios, type-led personal sites",
+  "use": [
+    "Portfolio"
+  ],
+  "feel": [
+    "Severe",
+    "Precise"
+  ],
+  "keywords": "swiss dossier typographic case study inter uppercase red",
+  "idea": "The portfolio's first shipped look, archived when the Drawing Set replaced it in October 2026: the International Typographic Style used as a case file, with heavy uppercase Inter on gridded paper and one red signal.",
+  "note": "Live: the drafting grid drifts, the role title rotates, buttons turn black and the text link draws a red underline on hover, and stat tiles invert to black.",
+  "fonts": [
+    "Inter:wght@400;500;700;800"
+  ],
+  "borrowed": "Swiss/International Typographic Style posters and a filed dossier: off-white paper on a faint drafting grid, hard black section rules, poster-scale uppercase grotesque, tiny catalogue labels (period, category, \"Problem\", \"Approach\"), photocopy-grey images.",
+  "mood": "Rational, confident, a little severe. Suits consultants and case-study heavy portfolios that want authority from type and structure rather than decoration. It reads as \"serious\" but sits close to generic minimalism without the red and the extreme scale contrast.",
+  "palette": [
+    {
+      "name": "Paper",
+      "hex": "#FAFAFA",
+      "role": "page, under the grid"
+    },
+    {
+      "name": "Sheet white",
+      "hex": "#FFFFFF",
+      "role": "footer, cards, header"
+    },
+    {
+      "name": "Off-black ink",
+      "hex": "#111111",
+      "role": "headings, body"
+    },
+    {
+      "name": "Rule black",
+      "hex": "#000000",
+      "role": "section rules, outlines"
+    },
+    {
+      "name": "Mid gray",
+      "hex": "#6C6C6C",
+      "role": "labels, metadata"
+    },
+    {
+      "name": "Hairline",
+      "hex": "#E5E7EB",
+      "role": "inner borders"
+    },
+    {
+      "name": "Input rule",
+      "hex": "#D1D5DB",
+      "role": "field underline"
+    },
+    {
+      "name": "Plate gray",
+      "hex": "#F3F4F6",
+      "role": "image placeholders"
+    },
+    {
+      "name": "Marquee band",
+      "hex": "#E8E8E8",
+      "role": "logo strip"
+    },
+    {
+      "name": "Splash black",
+      "hex": "#0A0A0A",
+      "role": "intro splash only"
+    },
+    {
+      "name": "Swiss red",
+      "hex": "#E60026",
+      "role": "the one signal"
+    }
+  ],
+  "type": [
+    {
+      "sample": "<span style=\"color:transparent;-webkit-text-stroke:1.5px currentColor\">Anshu</span> <span style=\"color:#E60026\">Phukan</span>",
+      "style": "font-family:'Inter';font-weight:700;text-transform:uppercase;letter-spacing:-.05em;font-size:44px;line-height:.9",
+      "meta": "Display · Inter 700, 3.75 → 8rem, −0.05em, lh 0.9"
+    },
+    {
+      "sample": "Rapid prototyping to deployment",
+      "style": "font-family:'Inter';font-weight:800;text-transform:uppercase;letter-spacing:-.05em;line-height:.95",
+      "meta": "Statement · Inter 800, 2.25 → 3rem, −0.05em"
+    },
+    {
+      "sample": "Body copy in sentence case, measured at 65–75ch.",
+      "style": "font-family:'Inter';font-weight:500;font-size:18px;line-height:1.6",
+      "meta": "Body · Inter 500, 1.125rem, lh 1.625"
+    },
+    {
+      "sample": "Category <span style=\"color:#6C6C6C\">— Context</span>",
+      "style": "font-family:'Inter';font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#E60026",
+      "meta": "Micro label · Inter 700, 10–12px, 0.1em, uppercase"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background-color:#FAFAFA;background-image:linear-gradient(to right,rgba(17,17,17,.08) 1px,transparent 1px),linear-gradient(to bottom,rgba(17,17,17,.08) 1px,transparent 1px);background-size:20px 20px",
+      "label": "Drafting grid · 40px, drifts 20s"
+    },
+    {
+      "css": "background:linear-gradient(#000,#000) 0 30%/100% 1px no-repeat,linear-gradient(#E5E7EB,#E5E7EB) 0 70%/100% 1px no-repeat,#FAFAFA",
+      "label": "Black section rule · hairline inside"
+    },
+    {
+      "css": "background:linear-gradient(#E60026,#E60026) 0 100%/60% 4px no-repeat,linear-gradient(135deg,#bbb,#888);filter:grayscale(1)",
+      "label": "Grayscale plate · red hover bar"
+    }
+  ],
+  "motion": [
+    "Hero name set letter by letter: 0.7s each, `cubic-bezier(0.22,1,0.36,1)`, 55ms stagger.",
+    "Role title slides up through a 1.1em mask every 2.8s, `cubic-bezier(0.76,0,0.24,1)`.",
+    "Splash: black panel, red line draws over 900ms, panel slides up.",
+    "Reveals rise 48px over 1000ms. Colour and state changes take 300ms, bars 500ms, images 700ms.",
+    "Images grayscale at rest, colour and 105% scale on hover."
+  ],
+  "watchouts": [
+    "One red only. Past roughly 10% of a screen it stops being a signal.",
+    "No shadows, no radius, no gradients beyond the grid and one hero fade.",
+    "Every section needs one oversized element plus micro labels, or it collapses into bland minimalism.",
+    "Mid gray on paper is fine for labels but too light for body copy."
+  ],
+  "tokens": "--paper: #FAFAFA;  --sheet: #FFFFFF;  --ink: #111111;  --rule: #000000;  --gray: #6C6C6C;\n--hairline: #E5E7EB;  --input-rule: #D1D5DB;  --plate: #F3F4F6;  --red: #E60026;\n--sans: 'Inter', sans-serif;  weights 300–900;  radius 0;  no shadows\ngrid: 40px at rgba(17,17,17,0.04), drifting 40px diagonally every 20s\ncontainer: max 1920px, gutters 24px / 48px from md;  12 columns from md"
+}

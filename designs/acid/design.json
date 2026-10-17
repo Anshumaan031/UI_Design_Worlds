@@ -1,0 +1,90 @@
+{
+  "id": "acid",
+  "name": "Acid Chrome",
+  "status": "proposed",
+  "tone": "dark",
+  "play": "high",
+  "fit": "Launches, music & nightlife, loud personal brands",
+  "use": [
+    "Launch / event",
+    "Music & culture"
+  ],
+  "feel": [
+    "Loud",
+    "Retro"
+  ],
+  "keywords": "y2k chrome rave flyer neon nightlife",
+  "idea": "The page is a Y2K rave flyer. Liquid-chrome display type tilts to catch the light, an acid-green grid floor runs to the horizon, and the details read like a line-up.",
+  "note": "Live: move the pointer across the stage. The chrome headline tilts in 3D and its specular highlight follows you; the grid floor never stops running.",
+  "fonts": [
+    "Unbounded:wght@400..900",
+    "IBM+Plex+Mono:wght@400;600"
+  ],
+  "borrowed": "Late-90s/Y2K rave and club flyers: liquid-chrome logotypes, acid smileys and acid-green, wireframe horizon grids, rotating sticker roundels, line-ups set in wide grotesks, and the photocopied \"info line\" at the bottom.",
+  "mood": "Loud, nocturnal, euphoric. Suits product launches, event and music sites, creative-tech personal brands, and any page whose job is hype. One screen of maximum energy, then calm down for the reading parts.",
+  "palette": [
+    {
+      "name": "Void",
+      "hex": "#07070A",
+      "role": "page"
+    },
+    {
+      "name": "Acid",
+      "hex": "#C6FF00",
+      "role": "grid, labels, sticker"
+    },
+    {
+      "name": "Hot magenta",
+      "hex": "#FF2BD6",
+      "role": "extrude, horizon glow"
+    },
+    {
+      "name": "Liquid chrome",
+      "hex": "gradient",
+      "role": "display type only",
+      "css": "linear-gradient(176deg,#fff 0 16%,#A7B0C2 38%,#232733 49%,#F4F7FF 52%,#8E97AB 72%,#fff)"
+    },
+    {
+      "name": "Flash white",
+      "hex": "#F2F2F2",
+      "role": "body text"
+    }
+  ],
+  "type": [
+    {
+      "sample": "After Dark",
+      "style": "font-family:'Unbounded';font-weight:900;letter-spacing:-.06em;text-transform:uppercase;font-size:36px",
+      "meta": "Display · Unbounded 900, -0.06em, chrome gradient + magenta extrude"
+    },
+    {
+      "sample": "Doors 23:00 — Late ✦ Fri 13.11",
+      "style": "font-family:'IBM Plex Mono';font-size:15px;letter-spacing:.18em;text-transform:uppercase",
+      "meta": "Info line · IBM Plex Mono, tracked +0.18em"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:linear-gradient(#C6FF00 2px,transparent 2px) 0 0/100% 20px,linear-gradient(90deg,#C6FF00 2px,transparent 2px) 0 0/20px 100%,#07070A",
+      "label": "Wireframe grid (tilt it)"
+    },
+    {
+      "css": "background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(255,43,214,.7),transparent 70%),#07070A",
+      "label": "Horizon glow"
+    },
+    {
+      "css": "background:linear-gradient(176deg,#fff 0 16%,#A7B0C2 38%,#232733 49%,#F4F7FF 52%,#8E97AB 72%,#fff)",
+      "label": "Chrome ramp"
+    }
+  ],
+  "motion": [
+    "Pointer → `--mx/--my` → `rotateX/Y` on the title, plus a radial highlight layer that slides across the chrome.",
+    "Floor: `rotateX(70deg)` plane whose background-position loops every 900ms.",
+    "Sticker text rides an SVG `textPath` and spins once every 9s."
+  ],
+  "watchouts": [
+    "Chrome text is decoration. Keep it to 2–4 words and never for anything that must be read quickly.",
+    "No strobes. Real flyers flash; web pages must not (WCAG 2.3.1).",
+    "Acid on void is fine for labels; body copy goes in near-white."
+  ],
+  "tokens": "--void: #07070A;  --acid: #C6FF00;  --hot: #FF2BD6;  --text: #F2F2F2;\n--chrome: linear-gradient(176deg, #fff 0 16%, #A7B0C2 38%, #232733 49%, #F4F7FF 52%, #8E97AB 72%, #fff 100%);\n--display: 'Unbounded', sans-serif (900, -0.06em);  --mono: 'IBM Plex Mono', monospace (+0.18em caps)\ntitle: background-clip: text; filter: drop-shadow(0 5px 0 var(--hot)) drop-shadow(0 0 22px rgba(255,43,214,.5))"
+}

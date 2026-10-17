@@ -1,0 +1,107 @@
+{
+  "id": "zine",
+  "name": "Ransom Zine",
+  "status": "proposed",
+  "tone": "light",
+  "play": "high",
+  "fit": "Zines, activists, indie labels, irreverent portfolios",
+  "use": [
+    "Music & culture",
+    "Studio / agency"
+  ],
+  "feel": [
+    "Loud",
+    "Playful"
+  ],
+  "keywords": "punk ransom collage photocopy cut paste",
+  "idea": "A punk zine run off the office photocopier. Headlines are letters cut from a dozen magazines, body copy is typewritten, and everything is taped, stapled and scrawled on.",
+  "note": "Live: type a headline and press \"Cut it out\". Every letter gets a random magazine font, paper colour, tilt and jagged scissor edge, then drops onto the page.",
+  "fonts": [
+    "Chakra+Petch:wght@500;600;700",
+    "VT323",
+    "Big+Shoulders+Stencil+Display:wght@700;900",
+    "Archivo:wdth,wght@62..125,400..900",
+    "Instrument+Serif:ital@0;1",
+    "Doto:wght@600;900",
+    "Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900",
+    "Unbounded:wght@400..900",
+    "Permanent+Marker",
+    "Special+Elite"
+  ],
+  "borrowed": "'77 punk and riot-grrrl zines, ransom-note collage, Xerox grain and toner speckle, masking tape, staples, highlighter, typewriter body copy and marker scrawl in the margins.",
+  "mood": "Defiant, handmade, funny. Suits zines and newsletters, indie labels, activist and community projects, and portfolios that want to look like they were made by a person in one sleepless night.",
+  "palette": [
+    {
+      "name": "Copier paper",
+      "hex": "#ECEAE3",
+      "role": "page + noise"
+    },
+    {
+      "name": "Toner",
+      "hex": "#121212",
+      "role": "text, blocks"
+    },
+    {
+      "name": "Hot pink",
+      "hex": "#FF3EA5",
+      "role": "marker, shadows"
+    },
+    {
+      "name": "Highlighter",
+      "hex": "#FFE600",
+      "role": "emphasis"
+    },
+    {
+      "name": "Mag blue",
+      "hex": "#2B59FF",
+      "role": "cut-out paper"
+    },
+    {
+      "name": "Masking tape",
+      "hex": "#E9D9A6",
+      "role": "at 85% opacity"
+    }
+  ],
+  "type": [
+    {
+      "sample": "<span style=\"font-family:'Fraunces';font-weight:900;background:#FFE600;padding:0 4px\">R</span><span style=\"font-family:'Archivo';font-weight:800;background:#121212;color:#fff;padding:0 4px;margin-left:2px\">A</span><span style=\"font-family:'VT323';background:#FF3EA5;padding:0 4px;margin-left:2px\">N</span><span style=\"font-family:'Instrument Serif';background:#fff;padding:0 4px;margin-left:2px\">S</span><span style=\"font-family:'Big Shoulders Stencil Display';font-weight:900;background:#2B59FF;color:#fff;padding:0 4px;margin-left:2px\">O</span><span style=\"font-family:'Unbounded';font-weight:800;background:#DCD6C8;padding:0 4px;margin-left:2px\">M</span>",
+      "style": "",
+      "meta": "Headlines · one letter per font: Fraunces, Archivo, VT323, Instrument Serif, Big Shoulders Stencil, Unbounded…"
+    },
+    {
+      "sample": "Typed on a borrowed machine.",
+      "style": "font-family:'Special Elite';font-size:20px",
+      "meta": "Body · Special Elite (typewriter)"
+    },
+    {
+      "sample": "cut it out!",
+      "style": "font-family:'Permanent Marker';font-size:26px;color:#FF3EA5",
+      "meta": "Scrawl · Permanent Marker, short notes only"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E\"),radial-gradient(ellipse,transparent 50%,rgba(0,0,0,.25)),#ECEAE3",
+      "label": "Toner grain + copier vignette"
+    },
+    {
+      "css": "background:linear-gradient(transparent 52%,#FFE600 52% 92%,transparent 92%) 50% 50%/70% 28px no-repeat,#fff",
+      "label": "Highlighter stroke"
+    },
+    {
+      "css": "background:linear-gradient(rgba(233,217,166,.9),rgba(233,217,166,.9)) 50% 50%/70% 30px no-repeat,#ECEAE3",
+      "label": "Masking tape"
+    }
+  ],
+  "motion": [
+    "Each cut letter: random font, paper, `rotate` ±9°, size 0.85–1.2em and an 8-point `clip-path` for scissor edges.",
+    "Letters drop in with a 40ms stagger and an overshoot (`cubic-bezier(.2,1.4,.4,1)`).",
+    "Buttons are stickers: hard pink offset shadow that collapses on press."
+  ],
+  "watchouts": [
+    "The ransom headline is `role=\"img\"` with the real text in `aria-label`; screen readers must not spell it letter by letter.",
+    "Load-heavy: ten font families. Subset them or limit the pool to five in production.",
+    "Chaos is for headlines only. Body copy stays one typeface, one column, high contrast."
+  ],
+  "tokens": "--paper: #ECEAE3;  --toner: #121212;  --pink: #FF3EA5;  --yellow: #FFE600;  --blue: #2B59FF;  --tape: rgba(233,217,166,.85);\n--body: 'Special Elite', monospace;   --scrawl: 'Permanent Marker', cursive;\ncut letter: padding .1em .16em; rotate: ±9deg; clip-path: polygon(8 jittered points); box-shadow: 1px 2px 0 rgba(0,0,0,.25)\nsticker button: box-shadow: 4px 4px 0 var(--pink) → 0 0 0 on :active"
+}

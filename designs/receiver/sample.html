@@ -1,0 +1,21 @@
+<div class="stage rx-s" id="rx-stage">
+  <div class="rx-s__set">
+    <div class="rx-s__grille"><b>Receiver</b></div>
+    <div class="rx-s__glass">
+      <div class="rx-s__scale" id="rx-scale">
+        <div class="rx-s__ticks"></div>
+        <span class="rx-s__needle" id="rx-needle"></span>
+      </div>
+      <input type="range" min="88" max="108" step="0.1" value="100" id="rx-range" aria-label="Tuning dial">
+    </div>
+    <div class="rx-s__row">
+      <svg class="rx-s__eye" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" fill="#0A120D" stroke="#1D140C" stroke-width="3" />
+        <circle cx="50" cy="50" r="44" fill="#5CF29A" id="rx-glow" />
+        <path id="rx-shade" fill="#0A120D" />
+        <circle cx="50" cy="50" r="15" fill="#1D140C" />
+      </svg>
+      <div class="rx-s__out" aria-live="polite"><span id="rx-freq">100.0</span><b id="rx-name">…</b></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+{
+  "id": "board",
+  "name": "The Board",
+  "status": "built",
+  "tone": "dark",
+  "play": "low",
+  "fit": "Engineers, hardware, infra and AI builders",
+  "use": [
+    "Dev & AI tools",
+    "Portfolio"
+  ],
+  "feel": [
+    "Precise",
+    "Technical"
+  ],
+  "keywords": "circuit pcb hardware electronics chip solder green copper",
+  "idea": "The page is a populated circuit board. Sections are components, links are traces, the one red LED is the only live colour.",
+  "note": "Live: blinking LED, signal flowing along the trace (stroke-dashoffset), chip hover.",
+  "fonts": [
+    "B612:wght@400;700",
+    "B612+Mono:wght@400;700",
+    "Chakra+Petch:wght@500;600;700"
+  ],
+  "borrowed": "Printed circuit boards: green solder mask, copper ground pours, gold-plated (ENIG) pads, white silkscreen labels, reference designators like U1 and R12, mounting holes in the corners.",
+  "mood": "Precise, engineered, quietly nerdy. Suits engineers, hardware and infra teams, AI builders, developer tools. Avoid for soft consumer brands.",
+  "palette": [
+    {
+      "name": "Solder mask",
+      "hex": "#0E3B2C",
+      "role": "background"
+    },
+    {
+      "name": "Mask deep",
+      "hex": "#072419",
+      "role": "wells, holes"
+    },
+    {
+      "name": "Copper",
+      "hex": "#C9772F",
+      "role": "traces, rules"
+    },
+    {
+      "name": "Gold",
+      "hex": "#D8B25B",
+      "role": "pads, focus"
+    },
+    {
+      "name": "Silkscreen",
+      "hex": "#F1EEE2",
+      "role": "text"
+    },
+    {
+      "name": "Silk dim",
+      "hex": "#A9BDAE",
+      "role": "secondary text"
+    },
+    {
+      "name": "LED",
+      "hex": "#FF3B30",
+      "role": "the one live signal"
+    }
+  ],
+  "type": [
+    {
+      "sample": "Systems 0 → 1",
+      "style": "font-family:'Chakra Petch';font-weight:700;text-transform:uppercase",
+      "meta": "Display · Chakra Petch 600–700, uppercase"
+    },
+    {
+      "sample": "Designed for cockpit legibility.",
+      "style": "font-family:'B612';font-size:20px",
+      "meta": "Body · B612 400/700 (Airbus cockpit face)"
+    },
+    {
+      "sample": "U1 · R12 · 3.3V",
+      "style": "font-family:'B612 Mono';font-size:18px",
+      "meta": "Data · B612 Mono, designators and numbers only"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:radial-gradient(circle at 1px 1px, rgba(201,119,47,.35) 1px, transparent 1.5px) 0 0/14px 14px, #0E3B2C",
+      "label": "Copper pour dots · 14px grid"
+    },
+    {
+      "css": "background:repeating-linear-gradient(90deg,#C9CBC6 0 4px,transparent 4px 10px) 50% 0/80% 10px no-repeat, repeating-linear-gradient(90deg,#C9CBC6 0 4px,transparent 4px 10px) 50% 100%/80% 10px no-repeat, linear-gradient(#141414,#141414) 50% 50%/80% 60% no-repeat, #0E3B2C",
+      "label": "IC pins · repeating gradient"
+    },
+    {
+      "css": "background:radial-gradient(circle, #072419 30%, #D8B25B 31% 46%, transparent 47%) 0 0/48px 48px, #0E3B2C",
+      "label": "Plated through-holes"
+    }
+  ],
+  "motion": [
+    "Signal pulse: short dash on the trace path, `stroke-dasharray: 14 300`, linear 2.4s loop.",
+    "LED: `steps(2)` blink, never smooth. Hardware doesn't fade.",
+    "Hover lifts a component 3px with a gold outline ring."
+  ],
+  "watchouts": [
+    "Keep a single accent (the LED). More reds turn it into a Christmas board.",
+    "Silk-dim on mask passes contrast only at 16px+.",
+    "Wide nav rows overflow on phones. Let them wrap."
+  ],
+  "tokens": "--mask: #0E3B2C;  --mask-deep: #072419;  --copper: #C9772F;  --gold: #D8B25B;\n--silk: #F1EEE2;  --silk-dim: #A9BDAE;  --led: #FF3B30;\n--display: 'Chakra Petch', sans-serif;  --sans: 'B612', sans-serif;  --mono: 'B612 Mono', monospace;"
+}

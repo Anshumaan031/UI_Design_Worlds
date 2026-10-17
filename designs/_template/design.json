@@ -1,0 +1,30 @@
+{
+  "id": "my-world",
+  "name": "My World",
+  "status": "proposed",
+  "tone": "light",
+  "play": "low",
+  "fit": "What kinds of projects it suits",
+  "use": ["Portfolio"],
+  "feel": ["Calm"],
+  "keywords": "words people might search for",
+  "idea": "One sentence: the object, process or era, and how the page becomes it.",
+  "note": "Live: what to try in the sample.",
+  "fonts": ["Inter:wght@400;700"],
+  "borrowed": "What real thing this borrows from: materials, marks, conventions.",
+  "mood": "How it feels, and who it suits. Say when to avoid it.",
+  "palette": [
+    { "name": "Ground", "hex": "#F4F1EA", "role": "background" },
+    { "name": "Ink", "hex": "#161613", "role": "text" },
+    { "name": "Signal", "hex": "#E5484D", "role": "the one accent" }
+  ],
+  "type": [
+    { "sample": "Display sample", "style": "font-family:'Inter';font-weight:700;font-size:32px", "meta": "Display · Inter 700" }
+  ],
+  "patterns": [
+    { "css": "background:repeating-linear-gradient(45deg,#161613 0 1px,transparent 1px 8px),#F4F1EA", "label": "Hatch · 45°" }
+  ],
+  "motion": ["What moves, how long, which easing. Use `backticks` for code."],
+  "watchouts": ["What goes wrong if you overdo it."],
+  "tokens": "--ground: #F4F1EA;  --ink: #161613;  --signal: #E5484D;\n--sans: 'Inter', sans-serif;"
+}

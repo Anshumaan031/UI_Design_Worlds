@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-12T00:00:00Z",
+  "title": "Design System: Anshumaan Phukan",
+  "extensions": {
+    "colorMeta": {
+      "ground": { "role": "neutral", "displayName": "Cyanotype Ground", "canonical": "#123F7E", "tonalRamp": ["#06152B", "#0A2449", "#0C2E5E", "#123F7E", "#1F579E", "#4A7DBF", "#8CAEDB", "#D3E1F3"] },
+      "ground-deep": { "role": "neutral", "displayName": "Deep Ground", "canonical": "#0C2E5E", "tonalRamp": ["#040F20", "#081E3D", "#0C2E5E", "#123F7E", "#1F579E", "#4A7DBF", "#8CAEDB", "#D3E1F3"] },
+      "line": { "role": "neutral", "displayName": "Line White", "canonical": "#EEF4FF", "tonalRamp": ["#1B2A42", "#3A4E6E", "#5E7599", "#8399BE", "#A9C0E2", "#C9D9F2", "#E0EAFB", "#EEF4FF"] },
+      "line-dim": { "role": "neutral", "displayName": "Line Dim", "canonical": "#A9C0E2", "tonalRamp": ["#1B2A42", "#3A4E6E", "#5E7599", "#8399BE", "#A9C0E2", "#C9D9F2", "#E0EAFB", "#EEF4FF"] },
+      "line-faint": { "role": "neutral", "displayName": "Line Faint", "canonical": "rgba(238, 244, 255, 0.16)" },
+      "grid-minor": { "role": "neutral", "displayName": "Grid Minor", "canonical": "rgba(238, 244, 255, 0.06)" },
+      "stamp": { "role": "primary", "displayName": "Approval Stamp Red", "canonical": "#FF5A4E", "tonalRamp": ["#3D0B07", "#6E160F", "#A32218", "#D93A2E", "#FF5A4E", "#FF8A81", "#FFB9B3", "#FFE3E0"] },
+      "stamp-wash": { "role": "primary", "displayName": "Stamp Wash", "canonical": "rgba(255, 90, 78, 0.08)" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name only; first name outlined, surname solid, with drafting guides." },
+      "headline": { "displayName": "Sheet Title", "purpose": "Sheet headings on a 3px double rule." },
+      "statement": { "displayName": "Statement", "purpose": "Positioning statements; last phrase may be outlined." },
+      "title": { "displayName": "Title", "purpose": "Project and degree titles." },
+      "body": { "displayName": "Specification Note", "purpose": "Prose in Barlow, 64–68ch measure." },
+      "body-small": { "displayName": "Detail Note", "purpose": "Case notes and dense detail." },
+      "button": { "displayName": "Button", "purpose": "Ink buttons; the stamp runs at 22px." },
+      "label": { "displayName": "Label", "purpose": "Nav, links, periods, spec-row terms, tags." },
+      "micro-label": { "displayName": "Title-Block Label", "purpose": "Footer cell headings and small annotations." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "State changes: hovers, entrances, image developing." },
+      { "name": "plot", "value": "cubic-bezier(0.65, 0, 0.35, 1)", "purpose": "Anything that draws: guides, wipes, process rail." },
+      { "name": "role-slide", "value": "520ms cubic-bezier(0.76, 0, 0.24, 1)", "purpose": "Masked word swaps (role box, stack stage word)." },
+      { "name": "hover", "value": "160–220ms", "purpose": "Hover and press feedback." },
+      { "name": "develop", "value": "600–900ms", "purpose": "Grayscale print → colour on hover." },
+      { "name": "scroll-plot", "value": "--p 0–1 per [data-scrub] block, each mark between --a and --b", "purpose": "Line work drawn by scroll progress via stroke-dashoffset." }
+    ],
+    "breakpoints": [
+      { "name": "narrow", "value": "600px" },
+      { "name": "single-column", "value": "900px" },
+      { "name": "medium", "value": "1100px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Stamp Button",
+      "kind": "button",
+      "refersTo": "button-stamp",
+      "description": "The primary action, as a red approval stamp. One per view.",
+      "html": "<a class=\"ds-stamp\" href=\"#\">Start a project</a>",
+      "css": ".ds-stamp { display: inline-flex; align-items: center; padding: 11px 24px 13px; border: 3px double #FF5A4E; color: #FF5A4E; background: rgba(255, 90, 78, 0.08); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; line-height: 1; transform: rotate(-3deg); transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1), background 200ms, color 200ms; } .ds-stamp:hover { transform: rotate(-3deg) scale(1.04); background: #FF5A4E; color: #0C2E5E; } .ds-stamp:active { transform: rotate(-3deg) scale(0.97); } .ds-stamp:focus-visible { outline: 2px dashed #EEF4FF; outline-offset: 4px; }"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Secondary action: outlined in line white, inverts on hover.",
+      "html": "<a class=\"ds-btn\" href=\"#\">View projects</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; padding: 13px 22px; border: 1.5px solid #EEF4FF; color: #EEF4FF; background: transparent; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 220ms cubic-bezier(0.16, 1, 0.3, 1), color 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover { background: #EEF4FF; color: #123F7E; } .ds-btn:focus-visible { outline: 2px dashed #EEF4FF; outline-offset: 4px; }"
+    },
+    {
+      "name": "Drawing Link",
+      "kind": "button",
+      "refersTo": "link",
+      "description": "Tertiary action in tracked condensed caps over a dim rule.",
+      "html": "<a class=\"ds-link\" href=\"#\">Full skill schedule →</a>",
+      "css": ".ds-link { color: #EEF4FF; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid #A9C0E2; padding-bottom: 2px; transition: border-color 200ms; } .ds-link:hover { border-color: #EEF4FF; } .ds-link:focus-visible { outline: 2px dashed #EEF4FF; outline-offset: 4px; }"
+    },
+    {
+      "name": "Top Bar",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Title-block header: wordmark left, dim nav links right.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-wordmark\" href=\"#\">ANSHUMAAN <span>/</span> PHUKAN</a><nav class=\"ds-nav\"><a href=\"#\">Work</a><a href=\"#\">Skillsets</a><a href=\"#\">Projects</a><a href=\"#\">Contact</a></nav></header>",
+      "css": ".ds-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; padding: 20px 24px; background: #123F7E; color: #EEF4FF; } .ds-wordmark { color: #EEF4FF; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.14em; text-decoration: none; } .ds-wordmark span { color: #A9C0E2; font-weight: 400; } .ds-nav { display: flex; flex-wrap: wrap; gap: 8px 32px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; } .ds-nav a { color: #A9C0E2; text-decoration: none; border-bottom: 1px solid transparent; transition: color 200ms, border-color 200ms; } .ds-nav a:hover { color: #EEF4FF; border-color: #EEF4FF; } .ds-nav a:focus-visible { outline: 2px dashed #EEF4FF; outline-offset: 4px; }"
+    },
+    {
+      "name": "Coursework Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Faint-outlined tag that inverts to line white on hover.",
+      "html": "<ul class=\"ds-tags\"><li>Machine Learning</li><li>Time Series</li><li>Optimisation</li></ul>",
+      "css": ".ds-tags { list-style: none; margin: 0; padding: 16px; display: flex; flex-wrap: wrap; gap: 8px; background: #123F7E; } .ds-tags li { border: 1px solid rgba(238, 244, 255, 0.16); color: #EEF4FF; padding: 5px 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; transition: border-color 200ms, background 200ms, color 200ms; } .ds-tags li:hover { border-color: #EEF4FF; background: #EEF4FF; color: #123F7E; }"
+    },
+    {
+      "name": "Drafting Field (provisional)",
+      "kind": "input",
+      "refersTo": "",
+      "description": "Provisional input: dim bottom rule that turns line white on focus.",
+      "html": "<label class=\"ds-field\"><span>Your email</span><input type=\"email\" placeholder=\"name@company.com\"></label>",
+      "css": ".ds-field { display: grid; gap: 8px; padding: 20px; background: #123F7E; max-width: 420px; } .ds-field span { color: #A9C0E2; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; } .ds-field input { appearance: none; border: 0; border-bottom: 1.5px solid #A9C0E2; border-radius: 0; background: transparent; color: #EEF4FF; font-family: 'Barlow', sans-serif; font-size: 17px; padding: 10px 0; transition: border-color 200ms; } .ds-field input::placeholder { color: #A9C0E2; opacity: 0.7; } .ds-field input:hover { border-color: #EEF4FF; } .ds-field input:focus-visible { outline: 2px dashed #EEF4FF; outline-offset: 4px; border-color: #EEF4FF; }"
+    },
+    {
+      "name": "Drawing Sheet",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "Framed sheet on the cyanotype grid with a double-ruled title.",
+      "html": "<div class=\"ds-ground\"><section class=\"ds-sheet\"><h2 class=\"ds-h2\">Tech stack</h2><p>Specification notes run in Barlow at a readable measure, under condensed drafting capitals.</p></section></div>",
+      "css": ".ds-ground { padding: 24px; background-color: #123F7E; background-image: linear-gradient(rgba(238,244,255,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(238,244,255,0.16) 1px, transparent 1px), linear-gradient(rgba(238,244,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(238,244,255,0.06) 1px, transparent 1px); background-size: 160px 160px, 160px 160px, 32px 32px, 32px 32px; } .ds-sheet { border: 2px solid #EEF4FF; outline: 1px solid #A9C0E2; outline-offset: 6px; padding: 32px 32px 40px 36px; color: #EEF4FF; font-family: 'Barlow', sans-serif; font-size: 17px; line-height: 1.55; } .ds-h2 { margin: 0 0 24px; padding-bottom: 12px; border-bottom: 3px double #EEF4FF; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 44px; line-height: 0.95; text-transform: uppercase; } .ds-sheet p { margin: 0; max-width: 64ch; }"
+    },
+    {
+      "name": "Dimension Stat",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "A stat drawn as a dimension line with a knocked-out value.",
+      "html": "<div class=\"ds-dimwrap\"><div class=\"ds-dim\"><div class=\"ds-dim__line\"><b>3+</b></div><span>Years experience</span></div></div>",
+      "css": ".ds-dimwrap { padding: 40px 24px 28px; background: #123F7E; color: #EEF4FF; } .ds-dim { display: grid; grid-template-columns: minmax(0, 1fr) 16ch; align-items: center; gap: 24px; } .ds-dim__line { position: relative; height: 0; border-top: 1.5px solid #EEF4FF; } .ds-dim__line::before, .ds-dim__line::after { content: ''; position: absolute; top: -11px; width: 1.5px; height: 21px; background: #EEF4FF; } .ds-dim__line::before { left: 0; } .ds-dim__line::after { right: 0; } .ds-dim__line b { position: absolute; left: 50%; top: 0; transform: translate(-50%, -54%); background: #123F7E; padding: 0 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 44px; line-height: 1; font-variant-numeric: tabular-nums; } .ds-dim span { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Issued Drawing Set",
+    "overview": "Every page is a set of numbered engineering sheets, issued for construction. The ground is Prussian-blue cyanotype with a two-level drafting grid. Content sits inside framed sheets (a heavy white border with a thin dim outline offset outside it), and each sheet is listed on a fixed index rail at the right edge. Systems aren't described, they're drawn: architecture schematics, dimension lines, section hatching, a staircase elevation for education. Line work plots itself in with scroll progress, so reading the page is watching the set get drafted.\n\nColour is the material, not decoration. Everything is ink on blueprint: bright line-white for anything that matters, dim blue-white for labels and construction marks, faint grid lines for structure. One red approval stamp is the only warm colour. It marks the action the visitor should take next (\"View experience\", \"Start a project\") and the key moments in the process (Prototype, Deploy). Photographs are printed onto the blueprint (grayscale, screen-blended) and develop into full colour when hovered.\n\nType is drafting lettering: Barlow Condensed in uppercase for everything structural, from the 140px hero name to 11px title-block labels, with Barlow (regular width) for readable specification notes. The system is flat and square; depth comes from double rules, outlines and inversion, never shadow.",
+    "keyCharacteristics": [
+      "Prussian-blue cyanotype ground with a 32px minor / 160px major drafting grid",
+      "White line work that plots in with scroll (stroke-dashoffset driven by a --p progress variable)",
+      "Framed, numbered sheets plus a fixed sheet-index rail",
+      "Barlow Condensed uppercase at every structural level; Barlow for prose",
+      "One red approval stamp, rotated −3°, rationed to the next action",
+      "Square corners and no shadows; circles only for nodes and markers"
+    ],
+    "rules": [
+      { "name": "The One Stamp Rule", "body": "Stamp Red appears on the primary action and on no more than two marked process nodes per view. It's an approval mark: if two stamps compete on one screen, one of them is wrong.", "section": "colors" },
+      { "name": "The Ink Hierarchy Rule", "body": "Importance is expressed by line weight and brightness, not by hue: Line White for content, Line Dim for annotation, Line Faint for structure. Never introduce a second blue for emphasis.", "section": "colors" },
+      { "name": "The Lettering Rule", "body": "Headings, labels, navigation, buttons, tags and drawing annotations are uppercase Barlow Condensed. Prose (descriptions, notes, the core-focus paragraph) is sentence-case Barlow. Never set prose in the condensed face.", "section": "typography" },
+      { "name": "The Numbers Rule", "body": "Years, counts and stats use font-variant-numeric: tabular-nums, so values that animate or align in columns don't jitter.", "section": "typography" },
+      { "name": "The Sheet Rule", "body": "Every top-level section is a framed sheet registered on the rail, with an id and a title. New pages are new drawing sets; new sections are new sheets, never unframed bands.", "section": "layout" },
+      { "name": "The Drawing-Over-Description Rule", "body": "Where a system, process or progression can be drawn (architecture, pipeline, timeline, growth), draw it as scroll-plotted line work and let the prose annotate it.", "section": "layout" },
+      { "name": "The No-Shadow Rule", "body": "Paper doesn't cast shadows on a blueprint. To raise something, frame it, double its rule or invert it.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do wrap every drawing-set page in <main className=\"dh\"> and build it from components/blueprint (Sheet, SheetRail, TopBar, DrawingFooter, useDrawingScroll). Add the route to DRAWING_ROUTES in App.tsx so the legacy header and footer step aside.",
+      "Do frame every top-level section as a sheet with an id and a rail title.",
+      "Do draw systems, pipelines and timelines as scroll-plotted SVG line work, annotated in condensed caps.",
+      "Do use Stamp Red only for the primary action and marked key nodes, one stamp per view.",
+      "Do express hierarchy with line weight and brightness: Line White, then Line Dim, then Line Faint.",
+      "Do put labels that sit on lines or hatching on a Ground knockout so they stay legible.",
+      "Do print photographs onto the blueprint (grayscale, screen blend) and develop them to colour on hover.",
+      "Do use the dashed 2px Line White focus outline on every interactive element.",
+      "Do keep a still state for reduced motion that still reads as a finished drawing."
+    ],
+    "donts": [
+      "Don't add box-shadows, glows, rounded corners or pills. Circles are for nodes and markers only.",
+      "Don't add a second accent, a second blue, or gradients beyond the drafting grid.",
+      "Don't set prose in Barlow Condensed or headings in Barlow.",
+      "Don't use a weight that isn't in the font request (Barlow Condensed 400–700, Barlow 400–600).",
+      "Don't let any text use Line Faint, and don't use Line Dim for body-length copy below 15px.",
+      "Don't use the retired Swiss tokens (Inter, swissRed, paper #FAFAFA, the 40px drifting grid) on any converted page."
+    ]
+  }
+}

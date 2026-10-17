@@ -1,0 +1,58 @@
+<div class="stage os-s" id="os-stage">
+  <p class="os-s__wall" aria-hidden="true">Systems<br>98</p>
+  <div class="os-s__icons">
+    <button class="os-s__icon" type="button" data-open="os-proj"><i class="os-s__ico os-s__ico--dir"></i><span>Projects</span></button>
+    <button class="os-s__icon" type="button" data-open="os-about"><i class="os-s__ico os-s__ico--txt"></i><span>readme.txt</span></button>
+    <button class="os-s__icon" type="button" data-open="os-bin"><i class="os-s__ico os-s__ico--bin"></i><span>Recycle Bin</span></button>
+  </div>
+
+  <div class="os-s__win os-s__win--about" id="os-about" data-title="readme.txt">
+    <div class="os-s__bar"><b>readme.txt</b><button class="os-s__x" type="button" aria-label="Close readme">×</button></div>
+    <div class="os-s__body">
+      <h4>Hello, world.</h4>
+      <p>Systems 98. I build AI systems that boot first time. Double-click a folder to look inside.</p>
+      <div class="os-s__btns"><button class="os-s__btn" type="button" data-open="os-proj">Projects…</button><button class="os-s__btn" type="button" data-close>OK</button></div>
+    </div>
+  </div>
+
+  <div class="os-s__win os-s__win--install" id="os-install" data-title="Setup">
+    <div class="os-s__bar"><b>Setup — Installing skills</b><button class="os-s__x" type="button" aria-label="Close setup">×</button></div>
+    <div class="os-s__body">
+      <p id="os-file" aria-live="polite">Copying files…</p>
+      <div class="os-s__prog" id="os-prog" role="progressbar" aria-label="Install progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+    </div>
+  </div>
+
+  <div class="os-s__win os-s__win--proj" id="os-proj" data-title="Projects" hidden>
+    <div class="os-s__bar"><b>C:\Projects</b><button class="os-s__x" type="button" aria-label="Close projects">×</button></div>
+    <div class="os-s__body">
+      <div class="os-s__well">
+        <div class="os-s__row"><span>multi-tenant-rag\</span><span>2025</span></div>
+        <div class="os-s__row"><span>voice-agents\</span><span>2025</span></div>
+        <div class="os-s__row"><span>fine-tuning-factory\</span><span>2026</span></div>
+        <div class="os-s__row"><span>eval-harness\</span><span>2026</span></div>
+      </div>
+      <p>4 object(s) · 0 bytes wasted</p>
+    </div>
+  </div>
+
+  <div class="os-s__win os-s__win--bin" id="os-bin" data-title="Recycle Bin" hidden>
+    <div class="os-s__bar"><b>Recycle Bin</b><button class="os-s__x" type="button" aria-label="Close recycle bin">×</button></div>
+    <div class="os-s__body"><p>The Recycle Bin is empty. Nothing shipped ever got thrown away.</p><div class="os-s__btns"><button class="os-s__btn" type="button" data-close>OK</button></div></div>
+  </div>
+
+  <div class="os-s__menu" id="os-menu" hidden>
+    <b>Systems98</b>
+    <ul>
+      <li><button type="button" data-open="os-proj">Projects</button></li>
+      <li><button type="button" data-open="os-about">Read me</button></li>
+      <li><button type="button" data-open="os-install">Install skills</button></li>
+      <li><button type="button" data-open="os-bin">Recycle Bin</button></li>
+    </ul>
+  </div>
+  <div class="os-s__task">
+    <button class="os-s__btn os-s__start" type="button" id="os-start" aria-expanded="false" aria-controls="os-menu"><i aria-hidden="true"></i>Start</button>
+    <div class="os-s__tasks" id="os-tasks"></div>
+    <span class="os-s__clock" id="os-clock">--:--</span>
+  </div>
+</div>

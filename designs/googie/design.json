@@ -1,0 +1,100 @@
+{
+  "id": "googie",
+  "name": "Googie",
+  "status": "proposed",
+  "tone": "light",
+  "play": "medium",
+  "fit": "Hospitality, local business, optimistic startups, events",
+  "use": [
+    "Local business",
+    "Launch / event"
+  ],
+  "feel": [
+    "Playful",
+    "Warm",
+    "Retro"
+  ],
+  "keywords": "atomic age roadside diner mid-century sign neon",
+  "idea": "Atomic-age roadside modernism. Starbursts, boomerangs and orbiting atoms in mustard, teal and coral, and a motel sign with chasing bulbs that lights up at dusk.",
+  "note": "Live: the bulbs chase and the atom orbits on their own. \"Light the sign\" turns day into dusk: the sky goes navy and the neon VACANCY tube and sparkles glow.",
+  "fonts": [
+    "Shrikhand",
+    "Josefin+Sans:wght@400..700"
+  ],
+  "borrowed": "1950s–60s Googie architecture and roadside Americana: coffee-shop roofs, motel signs with chaser bulbs and neon \"Vacancy\" tubes, starbursts, boomerang laminate patterns, Sputnik chandeliers and atomic orbit logos.",
+  "mood": "Optimistic, friendly, a little kitsch. Suits hospitality, local businesses, events, consumer apps and startups that want \"the future is fun\" instead of \"the future is grey\". The day/dusk switch makes a natural light/dark theme.",
+  "palette": [
+    {
+      "name": "Sky cream",
+      "hex": "#FFF1D6",
+      "role": "day page"
+    },
+    {
+      "name": "Dusk",
+      "hex": "#13233A",
+      "role": "night page"
+    },
+    {
+      "name": "Atomic teal",
+      "hex": "#1FB5AC",
+      "role": "sign, secondary"
+    },
+    {
+      "name": "Coral",
+      "hex": "#FF5A3C",
+      "role": "headlines, actions"
+    },
+    {
+      "name": "Mustard",
+      "hex": "#FFB81C",
+      "role": "starburst"
+    },
+    {
+      "name": "Neon pink",
+      "hex": "#FF8FB1",
+      "role": "vacancy tube, boomerang"
+    },
+    {
+      "name": "Ink",
+      "hex": "#1E2A3A",
+      "role": "text, line art"
+    }
+  ],
+  "type": [
+    {
+      "sample": "Tomorrow,",
+      "style": "font-family:'Shrikhand';font-size:40px;color:#FF5A3C",
+      "meta": "Display & signage · Shrikhand 400"
+    },
+    {
+      "sample": "Est. 2026 · Motor Inn",
+      "style": "font-family:'Josefin Sans';font-weight:700;font-size:16px;letter-spacing:.24em;text-transform:uppercase",
+      "meta": "Labels & body · Josefin Sans 400/700, caps tracked +0.24em"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:radial-gradient(circle at 9px 50%,#FFF6C9 0 3.5px,transparent 4.5px) 0 0/36px 100%,radial-gradient(circle at 27px 50%,#157F79 0 3.5px,transparent 4.5px) 0 0/36px 100%,#1FB5AC",
+      "label": "Chaser bulbs"
+    },
+    {
+      "css": "background:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='60'%3E%3Cpath d='M4 30 Q 30 6 64 18 Q 36 14 8 36Z' fill='%23FF8FB1'/%3E%3Cpath d='M44 54 Q 60 38 78 46 Q 60 44 46 58Z' fill='%231FB5AC'/%3E%3C/svg%3E\"),#FFF1D6",
+      "label": "Boomerang laminate"
+    },
+    {
+      "css": "background:conic-gradient(from 0deg,#FFB81C 0 7.5deg,#FFF1D6 7.5deg 15deg) 50% 50%/100% 100%",
+      "label": "Sunburst rays"
+    }
+  ],
+  "motion": [
+    "Bulbs: two radial-gradient layers (lit/unlit) shifted half a period with `steps(2)`, so the light chases; faster at dusk.",
+    "Starburst turns once a minute; the atom's electrons ride SVG `animateMotion` paths.",
+    "Day → dusk: one class swaps the sky token and switches the neon on with layered `text-shadow`, over 600–800ms."
+  ],
+  "watchouts": [
+    "Shrikhand is a sign face: headlines and logos only, never paragraphs.",
+    "Coral on cream sits near 3:1. Use it for large display type only; body text stays ink.",
+    "Kitsch overload is easy. Keep the decoration to the hero and let the rest breathe on cream."
+  ],
+  "tokens": "--sky: #FFF1D6;  --dusk: #13233A;  --teal: #1FB5AC;  --coral: #FF5A3C;  --mustard: #FFB81C;  --pink: #FF8FB1;  --ink: #1E2A3A;  --bulb: #FFF6C9;\n--display: 'Shrikhand', serif;   --sans: 'Josefin Sans', sans-serif (caps +0.24em)\nsign: border-radius: 46px 10px 46px 10px; rotate: -4deg; box-shadow: 12px 12px 0 var(--coral);\nneon: text-shadow: 0 0 6px var(--pink), 0 0 20px #FF3E7F;"
+}

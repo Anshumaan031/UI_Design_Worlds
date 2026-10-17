@@ -1,0 +1,76 @@
+{
+  "id": "swiss",
+  "name": "Swiss Poster",
+  "status": "proposed",
+  "tone": "light",
+  "play": "low",
+  "fit": "Studios, architecture, serious portfolios, type-led sites",
+  "use": [
+    "Studio / agency",
+    "Portfolio",
+    "Editorial"
+  ],
+  "feel": [
+    "Severe",
+    "Precise",
+    "Calm"
+  ],
+  "keywords": "typography grid poster helvetica international swiss red",
+  "idea": "The International Typographic Style: a strict 12-column grid, one grotesk, flush-left ragged-right text, a single red, and huge numerals doing the shouting.",
+  "note": "Live: toggle the grid overlay to see how every element snaps to the 12 columns.",
+  "fonts": [
+    "Inter+Tight:wght@400..900"
+  ],
+  "borrowed": "Swiss posters by Josef Müller-Brockmann, Armin Hofmann and the Basel/Zürich schools: objective photography, mathematical grids, asymmetric layouts, Akzidenz/Helvetica, red and black on white.",
+  "mood": "Rational, confident, timeless. Suits design studios, architecture, museums, serious portfolios, any type-led site that wants authority without decoration.",
+  "palette": [
+    {
+      "name": "Poster paper",
+      "hex": "#F5F4F0",
+      "role": "background"
+    },
+    {
+      "name": "Black",
+      "hex": "#111111",
+      "role": "text, rules"
+    },
+    {
+      "name": "Swiss red",
+      "hex": "#E3241B",
+      "role": "one hero element"
+    }
+  ],
+  "type": [
+    {
+      "sample": "12",
+      "style": "font-family:'Inter Tight';font-weight:900;font-size:56px;letter-spacing:-.06em;line-height:.9;color:#E3241B",
+      "meta": "Numerals · Inter Tight 900, tracking −0.06em"
+    },
+    {
+      "sample": "Twelve systems on a grid.",
+      "style": "font-family:'Inter Tight';font-weight:800;font-size:26px;letter-spacing:-.035em",
+      "meta": "Headings & body · Inter Tight 400–800 (stand-in for Akzidenz/Helvetica)"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:repeating-linear-gradient(90deg,rgba(227,36,27,.12) 0 calc(100%/12 - 4px),transparent calc(100%/12 - 4px) calc(100%/12)),#F5F4F0",
+      "label": "Visible column grid"
+    },
+    {
+      "css": "background:linear-gradient(#111,#111) 0 70%/100% 3px no-repeat,radial-gradient(circle at 70% 35%,#E3241B 0 28%,transparent 28.5%),#F5F4F0",
+      "label": "Rule + one geometric form"
+    }
+  ],
+  "motion": [
+    "Almost none. Content slides in along grid lines (translate by exactly one column).",
+    "A grid toggle is the one \"toy\": it shows the system behind the page.",
+    "Hover on links: underline thickens; nothing bounces."
+  ],
+  "watchouts": [
+    "Easy to slide into generic minimalism. The huge numeral, the red and the visible grid are what make it Swiss.",
+    "Flush-left ragged-right only. Never justify or centre body text.",
+    "Use one family in two or three weights, no more."
+  ],
+  "tokens": "--paper: #F5F4F0;  --ink: #111111;  --red: #E3241B;\n--sans: 'Inter Tight', sans-serif;   grid: 12 columns, 16px gutter, margins = 1 column on desktop\ndisplay: 900, -0.06em, line-height 0.78"
+}

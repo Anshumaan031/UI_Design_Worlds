@@ -1,0 +1,30 @@
+.ab-s { --trench: #071726; --bone: #DDE8EE; --cyan: #3BF7FF; --violet: #A78BFF; --lure: #FFE45C; --x: 34%; --y: 42%; background: radial-gradient(ellipse 90% 60% at 50% -10%, #0B2A44, transparent 70%), var(--trench); color: var(--bone); font-family: 'IBM Plex Mono', monospace; min-height: 460px; padding: 40px 110px 40px clamp(16px, 4vw, 52px); display: grid; align-content: center; gap: 18px; outline: none; }
+.ab-s:focus-visible { box-shadow: inset 0 0 0 2px var(--cyan); }
+.ab-s__dark { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: radial-gradient(circle 170px at var(--x) var(--y), rgba(2, 6, 13, 0) 0, rgba(2, 6, 13, 0.55) 48%, rgba(2, 6, 13, 0.97) 100%); transition: opacity 700ms; }
+.ab-s.surface .ab-s__dark { opacity: 0; }
+.ab-s__zone { margin: 0; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cyan); }
+.ab-s h4 { margin: 0; font: 300 clamp(40px, 7vw, 92px)/0.95 'Fraunces', serif; letter-spacing: -0.035em; max-width: 12ch; }
+.ab-s h4 em { font-style: italic; color: var(--cyan); }
+.ab-s__lede { margin: 0; max-width: 46ch; font-size: 14px; color: #9FB4C2; }
+.ab-s__specimens { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 6px 0 0; padding: 0; list-style: none; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+.ab-s__specimens b { color: var(--lure); font-weight: 600; margin-right: 6px; }
+.ab-s__snow { position: absolute; inset: 0; z-index: 3; pointer-events: none; opacity: 0.55; background-image: radial-gradient(circle, rgba(221, 232, 238, 0.55) 0 1px, transparent 1.6px), radial-gradient(circle, rgba(59, 247, 255, 0.4) 0 1px, transparent 1.6px); background-size: 90px 110px, 140px 170px; background-position: 0 0, 40px 60px; animation: abSnow 16s linear infinite; }
+@keyframes abSnow { to { background-position: 0 110px, 40px 230px; } }
+.ab-s__jelly { position: absolute; z-index: 3; top: 26px; right: 128px; width: 86px; pointer-events: none; overflow: visible; filter: drop-shadow(0 0 10px var(--violet)); animation: abBob 5.5s ease-in-out infinite; }
+.ab-s__jelly .bell { fill: rgba(167, 139, 255, 0.32); stroke: var(--violet); stroke-width: 1.6; }
+.ab-s__jelly .tent { fill: none; stroke: var(--violet); stroke-width: 1.2; opacity: 0.8; transform-origin: 40px 44px; animation: abSway 3.2s ease-in-out infinite alternate; }
+@keyframes abBob { 50% { translate: 0 -16px; } }
+@keyframes abSway { from { transform: skewX(-6deg); } to { transform: skewX(6deg); } }
+.ab-s__angler { position: absolute; z-index: 3; bottom: 34px; right: 120px; width: 150px; pointer-events: none; overflow: visible; }
+.ab-s__angler .stalk { fill: none; stroke: rgba(255, 228, 92, 0.22); stroke-width: 2; }
+.ab-s__angler .lure { fill: var(--lure); filter: drop-shadow(0 0 6px var(--lure)) drop-shadow(0 0 18px rgba(255, 228, 92, 0.7)); animation: abPulse 2.6s ease-in-out infinite; }
+.ab-s__angler .eye { fill: none; stroke: rgba(255, 228, 92, 0.35); stroke-width: 1.5; }
+@keyframes abPulse { 50% { opacity: 0.45; } }
+.ab-s__p { position: absolute; z-index: 3; width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 8px 2px rgba(59, 247, 255, 0.7); animation: abPulse 3s ease-in-out infinite; pointer-events: none; }
+.ab-s__gauge { position: absolute; z-index: 3; top: 24px; bottom: 24px; right: 22px; width: 60px; border-left: 1px solid rgba(59, 247, 255, 0.45); background: repeating-linear-gradient(transparent 0 23px, rgba(59, 247, 255, 0.45) 23px 24px) 0 0 / 10px 100% no-repeat; pointer-events: none; }
+.ab-s__mark { position: absolute; left: -6px; top: clamp(0px, calc(var(--y) - 24px), calc(100% - 2px)); display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--cyan); white-space: nowrap; text-shadow: 0 0 6px rgba(59, 247, 255, 0.8); }
+.ab-s__mark::before { content: ''; width: 0; height: 0; border-block: 5px solid transparent; border-left: 7px solid var(--cyan); }
+.ab-s__mark span { writing-mode: vertical-rl; rotate: 180deg; }
+.ab-s__btn { position: relative; z-index: 4; justify-self: start; margin-top: 8px; appearance: none; background: transparent; color: var(--cyan); border: 1.5px solid var(--cyan); border-radius: 999px; padding: 8px 18px; font: 600 12px 'IBM Plex Mono', monospace; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; box-shadow: 0 0 14px rgba(59, 247, 255, 0.45), inset 0 0 10px rgba(59, 247, 255, 0.25); }
+.ab-s__btn:hover { background: var(--cyan); color: #02060D; }
+@media (max-width: 600px) { .ab-s { padding-right: 84px; } .ab-s__jelly { right: 84px; width: 60px; } .ab-s__angler { right: 70px; width: 110px; } }

@@ -1,0 +1,37 @@
+.sm-s { --paper: #EFE8DA; --ink: #14110F; --cinnabar: #C8321E; --ash: #5E574C; --hair: rgba(20, 17, 15, .2);
+  background: radial-gradient(ellipse 60% 70% at 25% 45%, #F6F0E3, transparent 70%), var(--paper); color: var(--ink); font-family: 'Zen Kaku Gothic New', sans-serif; padding: 28px clamp(18px, 4vw, 52px) 48px; display: grid; gap: 30px; }
+.sm-s ::selection { background: var(--cinnabar); color: var(--paper); }
+.sm-s__bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--ash); }
+.sm-s__bar b { font: 800 18px 'Shippori Mincho', serif; letter-spacing: .06em; text-transform: none; color: var(--ink); }
+.sm-s__bar b span { font-weight: 400; color: var(--ash); }
+.sm-s__body { display: grid; grid-template-columns: minmax(240px, 1fr) minmax(0, 1fr); gap: clamp(20px, 5vw, 64px); align-items: center; }
+.sm-s__enso { position: relative; width: min(100%, 420px); aspect-ratio: 1; justify-self: center; }
+.sm-s__enso svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.sm-s__ring { stroke: var(--ink); stroke-width: 15; stroke-dasharray: 92 100; stroke-dashoffset: 0; }
+.sm-s__dry { stroke: var(--ink); stroke-width: 4; stroke-dasharray: 60 100; stroke-dashoffset: -8; opacity: .7; }
+.sm-s[data-state="idle"] .sm-s__ring, .sm-s[data-state="idle"] .sm-s__dry { animation: smDraw 2.2s cubic-bezier(.22, 1, .36, 1) both; }
+@keyframes smDraw { from { stroke-dashoffset: 100; } }
+.sm-s__time { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; gap: 4px; }
+.sm-s__time b { font: 800 clamp(2.6rem, 9vw, 4.4rem)/1 'Shippori Mincho', serif; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.sm-s__time small { font-size: 12px; letter-spacing: .24em; color: var(--cinnabar); font-weight: 500; }
+.sm-s__time span { font: 500 15px 'Shippori Mincho', serif; letter-spacing: .3em; text-transform: uppercase; color: var(--ash); }
+.sm-s__side { position: relative; display: grid; gap: 22px; padding-left: clamp(0px, 5vw, 70px); }
+.sm-s__vert { position: absolute; left: 0; top: 0; margin: 0; writing-mode: vertical-rl; font: 800 clamp(1.8rem, 4.4vw, 3rem)/1 'Shippori Mincho', serif; letter-spacing: .2em; color: var(--cinnabar); }
+.sm-s__title { margin: 0; font: 800 clamp(1.9rem, 5.2vw, 3.8rem)/1.12 'Shippori Mincho', serif; letter-spacing: -.01em; text-wrap: balance; }
+.sm-s__title em { font-style: normal; color: var(--cinnabar); }
+.sm-s__teas { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.sm-s__teas li { border-bottom: 1px solid var(--hair); }
+.sm-s__teas button { appearance: none; width: 100%; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; background: none; border: 0; padding: 12px 4px; cursor: pointer; text-align: left; font: 500 20px 'Shippori Mincho', serif; color: var(--ink); transition: background 300ms, padding 400ms cubic-bezier(.16, 1, .3, 1); }
+.sm-s__teas small { font: 400 12px 'Zen Kaku Gothic New', sans-serif; letter-spacing: .08em; color: var(--ash); }
+.sm-s__teas button:hover { padding-left: 14px; }
+.sm-s__teas button[aria-checked="true"] { background: var(--ink); color: var(--paper); padding-left: 14px; }
+.sm-s__teas button[aria-checked="true"] small { color: #CFC6B4; }
+.sm-s__teas button:focus-visible, .sm-s__btn:focus-visible { outline: 2px solid var(--cinnabar); outline-offset: 3px; }
+.sm-s__row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
+.sm-s__btn { appearance: none; border: 0; background: var(--cinnabar); color: #FFF7EA; padding: 17px 34px; font: 500 13px/1 'Zen Kaku Gothic New', sans-serif; letter-spacing: .22em; text-transform: uppercase; cursor: pointer; transition: background 300ms; }
+.sm-s__btn:hover { background: var(--ink); }
+.sm-s__seal { display: grid; place-items: center; width: 54px; height: 54px; background: var(--cinnabar); color: #FFF7EA; font: 800 30px 'Shippori Mincho', serif; transform: rotate(-4deg); opacity: .25; transition: opacity 500ms; }
+.sm-s[data-state="done"] .sm-s__seal { opacity: 1; animation: smStamp 600ms cubic-bezier(.16, 1, .3, 1); }
+@keyframes smStamp { from { transform: rotate(-4deg) scale(1.9); opacity: 0; } }
+@media (max-width: 640px) { .sm-s__body { grid-template-columns: 1fr; } .sm-s__side { padding-left: 52px; } .sm-s__vert { top: 4px; } }
+@media (prefers-reduced-motion: reduce) { .sm-s__ring, .sm-s__dry, .sm-s__seal { animation: none !important; } }

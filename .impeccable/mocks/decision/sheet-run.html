@@ -1,0 +1,58 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--g:#123F7E;--d:#0C2E5E;--l:#EEF4FF;--m:#A9C0E2;--f:rgba(238,244,255,.16);--s:#FF5A4E}
+*{box-sizing:border-box}html,body{margin:0;width:1440px;height:900px;overflow:hidden}
+body{background:var(--d);color:var(--l);font-family:Barlow;padding:18px 0 0}
+.top{display:flex;justify-content:space-between;font:700 16px 'Barlow Condensed';letter-spacing:.14em;padding:0 64px 14px}
+.top nav{display:flex;gap:40px;font-weight:600;font-size:14px;letter-spacing:.18em;color:var(--m)}.top nav b{color:var(--l);border-bottom:1px solid var(--l)}
+.track{display:flex;gap:40px;padding-left:64px}
+.sheet{flex:none;width:1160px;height:700px;border:2px solid var(--l);outline:1px solid var(--m);outline-offset:6px;padding:34px 40px;position:relative;background:var(--g);background-image:linear-gradient(var(--f) 1px,transparent 1px),linear-gradient(90deg,var(--f) 1px,transparent 1px),linear-gradient(rgba(238,244,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(238,244,255,.06) 1px,transparent 1px);background-size:160px 160px,160px 160px,32px 32px,32px 32px}
+.sheet.next{opacity:.55}
+.no{font:600 13px 'Barlow Condensed';letter-spacing:.2em;color:var(--m);text-transform:uppercase}
+h1{font:700 150px/.84 'Barlow Condensed';text-transform:uppercase;margin:14px 0 0;letter-spacing:-.005em}
+h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--l);font-size:88px}
+.role{font:700 26px 'Barlow Condensed';letter-spacing:.06em;text-transform:uppercase;margin:24px 0 6px}
+.meta{font:600 13px 'Barlow Condensed';letter-spacing:.2em;color:var(--m);text-transform:uppercase}
+p{width:470px;font-size:17px;line-height:1.55;margin:22px 0 0}
+.metric{display:inline-block;margin-top:22px;border-top:1px solid var(--m);border-bottom:1px solid var(--m);padding:8px 0;font:700 19px 'Barlow Condensed';letter-spacing:.04em;text-transform:uppercase}
+svg{position:absolute;right:40px;top:40px}
+.t{font-family:'Barlow Condensed';text-transform:uppercase}
+.scale{position:absolute;left:64px;right:64px;bottom:22px;height:60px}
+.bar{position:absolute;left:0;right:0;top:20px;height:10px;border:1.5px solid var(--l);background:repeating-linear-gradient(90deg,var(--l) 0 25%,transparent 25% 50%)}
+.yrs{position:absolute;top:38px;left:0;right:0;display:flex;justify-content:space-between;font:600 13px 'Barlow Condensed';letter-spacing:.16em;color:var(--m)}
+.here{position:absolute;left:41%;top:0;height:40px;width:3px;background:var(--s)}
+.here::after{content:'YOU ARE HERE · SHEET 3 OF 5';position:absolute;left:10px;top:-4px;white-space:nowrap;font:700 12px 'Barlow Condensed';letter-spacing:.18em;color:var(--s)}
+</style></head><body>
+<div class="top">ANSHUMAAN / PHUKAN<nav><b>WORK</b><span>SKILLSETS</span><span>PROJECTS</span><span>CONTACT</span></nav></div>
+<div class="track">
+ <div class="sheet">
+  <span class="no">Sheet W-03 of 05 · Aug 2025 – present</span>
+  <h1>Chetu Inc<span>Freelance</span></h1>
+  <div class="role">AI/ML Consultant</div>
+  <div class="meta">Noida, India · 4 systems shipped</div>
+  <p>Architected a fully containerized, multi-tenant SaaS platform for enterprise-grade RAG on Azure, with per-client index isolation for secure tenant segregation.</p>
+  <div class="metric">80–90% less reprocessing overhead</div>
+  <svg width="460" height="600" viewBox="0 0 460 600" fill="none">
+   <text class="t" x="0" y="16" fill="#A9C0E2" font-size="13" font-weight="600" letter-spacing="2">DETAIL 1 · RAG INGESTION</text>
+   <rect x="60" y="50" width="340" height="60" stroke="#EEF4FF" stroke-width="1.6"/><text class="t" x="230" y="86" fill="#EEF4FF" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="1">PDF · DOCX · CSV · AUDIO · VIDEO</text>
+   <path d="M230 110 V150" stroke="#A9C0E2"/>
+   <rect x="20" y="150" width="120" height="70" stroke="#EEF4FF" stroke-width="1.6"/><text class="t" x="80" y="190" fill="#EEF4FF" font-size="15" font-weight="700" text-anchor="middle">PARSE</text>
+   <rect x="170" y="150" width="120" height="70" stroke="#EEF4FF" stroke-width="1.6"/><text class="t" x="230" y="190" fill="#EEF4FF" font-size="15" font-weight="700" text-anchor="middle">CHUNK</text>
+   <rect x="320" y="150" width="120" height="70" stroke="#EEF4FF" stroke-width="1.6"/><text class="t" x="380" y="190" fill="#EEF4FF" font-size="15" font-weight="700" text-anchor="middle">EMBED</text>
+   <path d="M140 185 H170 M290 185 H320" stroke="#A9C0E2"/>
+   <path d="M230 220 V270" stroke="#A9C0E2"/>
+   <rect x="60" y="270" width="340" height="80" stroke="#EEF4FF" stroke-width="1.6"/><rect x="66" y="276" width="328" height="68" stroke="#A9C0E2"/>
+   <text class="t" x="230" y="314" fill="#EEF4FF" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="1">AZURE AI SEARCH</text>
+   <text class="t" x="230" y="333" fill="#A9C0E2" font-size="11" text-anchor="middle" letter-spacing="1.5">ENRICHMENT CACHE</text>
+   <path d="M120 350 V400 M230 350 V400 M340 350 V400" stroke="#A9C0E2" stroke-dasharray="5 5"/>
+   <rect x="70" y="400" width="100" height="56" stroke="#EEF4FF"/><rect x="180" y="400" width="100" height="56" stroke="#EEF4FF"/><rect x="290" y="400" width="100" height="56" stroke="#EEF4FF"/>
+   <text class="t" x="120" y="433" fill="#EEF4FF" font-size="13" font-weight="700" text-anchor="middle">TENANT A</text><text class="t" x="230" y="433" fill="#EEF4FF" font-size="13" font-weight="700" text-anchor="middle">TENANT B</text><text class="t" x="340" y="433" fill="#EEF4FF" font-size="13" font-weight="700" text-anchor="middle">TENANT C</text>
+   <text class="t" x="230" y="490" fill="#A9C0E2" font-size="12" text-anchor="middle" letter-spacing="2">PER-CLIENT INDEX ISOLATION</text>
+  </svg>
+ </div>
+ <div class="sheet next"><span class="no">Sheet W-04 of 05</span><h1>Nextgen<span>Invent</span></h1></div>
+</div>
+<div class="scale"><div class="bar"></div><div class="here"></div><div class="yrs"><span>APR 2024</span><span>2025</span><span>2026</span><span>NOW</span></div></div>
+</body></html>

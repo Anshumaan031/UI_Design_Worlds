@@ -1,0 +1,41 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--g:#123F7E;--d:#0C2E5E;--l:#EEF4FF;--m:#A9C0E2;--f:rgba(238,244,255,.16);--s:#FF5A4E}
+*{box-sizing:border-box}html,body{margin:0;width:1440px;height:900px;overflow:hidden}
+body{background:var(--g);background-image:linear-gradient(var(--f) 1px,transparent 1px),linear-gradient(90deg,var(--f) 1px,transparent 1px),linear-gradient(rgba(238,244,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(238,244,255,.06) 1px,transparent 1px);background-size:160px 160px,160px 160px,32px 32px,32px 32px;color:var(--l);font-family:Barlow;padding:18px 64px}
+.sheet{border:2px solid var(--l);outline:1px solid var(--m);outline-offset:6px;height:858px;padding:28px 40px;position:relative}
+.top{display:flex;justify-content:space-between;font:700 16px 'Barlow Condensed';letter-spacing:.14em}
+.top nav{display:flex;gap:40px;font-weight:600;font-size:14px;letter-spacing:.18em;color:var(--m)}.top nav b{color:var(--l);border-bottom:1px solid var(--l)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;margin:30px 0 0;padding-bottom:14px;border-bottom:3px double var(--l)}
+h1{font:700 104px/.86 'Barlow Condensed';text-transform:uppercase;margin:0}
+h1 span{color:transparent;-webkit-text-stroke:2px var(--l)}
+.head p{margin:0;width:380px;font-size:17px;line-height:1.55;color:var(--l)}
+table{width:100%;border-collapse:collapse;margin-top:6px}
+th{font:600 12px 'Barlow Condensed';letter-spacing:.2em;color:var(--m);text-align:left;padding:12px 0 8px;text-transform:uppercase;border-bottom:1.5px solid var(--l)}
+td{border-bottom:1px solid var(--f);padding:0;vertical-align:middle;font-family:'Barlow Condensed';text-transform:uppercase}
+td.rev{width:150px;font:700 96px/1 'Barlow Condensed';color:transparent;-webkit-text-stroke:1.5px var(--l)}
+tr.cur td.rev{color:var(--l);-webkit-text-stroke:0}
+td.date{width:220px;font-weight:600;font-size:15px;letter-spacing:.16em;color:var(--m)}
+td.co{font-weight:700;font-size:34px;letter-spacing:.01em;line-height:1}
+td.co small{display:block;font-weight:600;font-size:14px;letter-spacing:.16em;color:var(--m);margin-top:6px}
+td.sys{width:270px}
+.dots{display:flex;gap:8px}.dots i{width:30px;height:30px;border:1px solid var(--m);border-radius:50%;display:grid;place-items:center;font:600 12px 'Barlow Condensed';font-style:normal;color:var(--m)}
+td.open{width:120px;text-align:right;font-weight:600;font-size:14px;letter-spacing:.18em}
+.stamp{position:absolute;left:470px;top:262px;border:3px double var(--s);color:var(--s);background:rgba(255,90,78,.08);transform:rotate(-6deg);font:700 18px 'Barlow Condensed';letter-spacing:.1em;padding:8px 16px;text-transform:uppercase;line-height:1.1;text-align:center}
+.stamp small{display:block;font-size:11px;letter-spacing:.2em}
+</style></head><body>
+<div class="sheet">
+ <div class="top">ANSHUMAAN / PHUKAN<nav><b>WORK</b><span>SKILLSETS</span><span>PROJECTS</span><span>CONTACT</span></nav></div>
+ <div class="head"><h1>Revision <span>register</span></h1><p>Five issues of the same drawing. Each role revised what I could build; open a revision to see the systems it shipped.</p></div>
+ <table>
+  <tr><th>Rev</th><th>Issued</th><th>Description</th><th>Systems</th><th></th></tr>
+  <tr class="cur"><td class="rev">E</td><td class="date">Dec 2025 – Now</td><td class="co">Nextgen Invent<small>Data Scientist · Noida</small></td><td class="sys"><div class="dots"><i>1</i><i>2</i><i>3</i></div></td><td class="open">Open +</td></tr>
+  <tr><td class="rev">D</td><td class="date">Oct 2025 – Now</td><td class="co">Chetu Inc<small>AI/ML Consultant · Freelance</small></td><td class="sys"><div class="dots"><i>1</i><i>2</i><i>3</i><i>4</i></div></td><td class="open">Open +</td></tr>
+  <tr><td class="rev">C</td><td class="date">Aug – Oct 2025</td><td class="co">Brillio<small>Senior AI/ML Engineer · Remote</small></td><td class="sys"><div class="dots"><i>1</i><i>2</i></div></td><td class="open">Open +</td></tr>
+  <tr><td class="rev">B</td><td class="date">Dec 2024 – Jul 2025</td><td class="co">DSCI NASSCOM<small>Technical Analyst · Project Lead</small></td><td class="sys"><div class="dots"><i>1</i><i>2</i><i>3</i></div></td><td class="open">Open +</td></tr>
+ </table>
+ <div class="stamp">Current issue<small>Rev E · approved</small></div>
+</div>
+</body></html>

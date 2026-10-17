@@ -1,0 +1,16 @@
+.tt-s { background: #000; color: #fff; display: grid; place-items: center; padding: 28px 12px; }
+.tt-s__screen { position: relative; font-family: 'VT323', monospace; font-size: clamp(15px, 2.5vw, 24px); line-height: 1; white-space: pre; text-shadow: 0 0 3px rgba(255, 255, 255, 0.35); }
+.tt-s__screen::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(180deg, transparent 0 2px, rgba(0, 0, 0, 0.25) 3px); }
+.tt-s__row { display: block; height: 1em; }
+.tt-s__dh { display: block; height: 2em; }
+.tt-s__dh span { display: inline-block; transform: scaleY(2); transform-origin: top left; }
+.tt-s .r { color: #FF0000; } .tt-s .g { color: #00FF00; } .tt-s .y { color: #FFFF00; } .tt-s .b { color: #0000FF; } .tt-s .m { color: #FF00FF; } .tt-s .c { color: #00FFFF; } .tt-s .w { color: #fff; }
+.tt-s .bgb { background: #0000FF; } .tt-s .bgr { background: #FF0000; }
+.tt-s__mosaic { display: inline-grid; grid-template-columns: repeat(12, 0.5em); grid-auto-rows: 0.33em; vertical-align: top; }
+.tt-s__mosaic i { background: transparent; }
+.tt-s__mosaic i.on { background: #00FFFF; }
+.tt-s__fast { display: flex; }
+.tt-s__fast button { font: inherit; background: none; border: 0; padding: 0 1ch 0 0; cursor: pointer; text-shadow: inherit; }
+.tt-s__fast button:hover, .tt-s__fast button:focus-visible { background: #fff; color: #000; outline: none; }
+.tt-s__body { animation: ttIn 160ms steps(3) both; }
+@keyframes ttIn { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }

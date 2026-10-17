@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--g:#123F7E;--d:#0C2E5E;--l:#EEF4FF;--m:#A9C0E2;--f:rgba(238,244,255,.16);--s:#FF5A4E}
+*{box-sizing:border-box}html,body{margin:0;width:1440px;height:900px;overflow:hidden}
+body{background:var(--g);background-image:linear-gradient(var(--f) 1px,transparent 1px),linear-gradient(90deg,var(--f) 1px,transparent 1px),linear-gradient(rgba(238,244,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(238,244,255,.06) 1px,transparent 1px);background-size:160px 160px,160px 160px,32px 32px,32px 32px;color:var(--l);font-family:Barlow;padding:18px 64px}
+.sheet{border:2px solid var(--l);outline:1px solid var(--m);outline-offset:6px;height:858px;padding:28px 40px;position:relative}
+.top{display:flex;justify-content:space-between;font:700 16px 'Barlow Condensed';letter-spacing:.14em}
+.top nav{display:flex;gap:40px;font-weight:600;font-size:14px;letter-spacing:.18em;color:var(--m)}.top nav b{color:var(--l);border-bottom:1px solid var(--l)}
+h1{font:700 128px/0.86 'Barlow Condensed';text-transform:uppercase;margin:26px 0 0}
+h1 span{color:transparent;-webkit-text-stroke:2px var(--l)}
+.lede{position:absolute;left:40px;top:300px;width:330px;font-size:17px;line-height:1.55;color:var(--l)}
+.lede small{display:block;font:600 13px 'Barlow Condensed';letter-spacing:.2em;color:var(--m);margin-bottom:10px;text-transform:uppercase}
+svg{position:absolute;left:400px;top:120px}
+.t{font-family:'Barlow Condensed';text-transform:uppercase}
+.legend{position:absolute;left:40px;bottom:36px;width:330px;border:1.5px solid var(--l);padding:14px 16px;font:600 13px 'Barlow Condensed';letter-spacing:.16em;text-transform:uppercase;display:grid;gap:8px}
+.legend i{display:inline-block;width:26px;height:12px;border:1.5px solid var(--l);margin-right:10px;vertical-align:middle}
+.legend i.dash{border-style:dashed}
+.stamp{position:absolute;right:56px;bottom:40px;border:3px double var(--s);color:var(--s);background:rgba(255,90,78,.08);transform:rotate(-3deg);font:700 22px 'Barlow Condensed';letter-spacing:.08em;padding:11px 24px;text-transform:uppercase}
+</style></head><body>
+<div class="sheet">
+ <div class="top">ANSHUMAAN / PHUKAN<nav><b>WORK</b><span>SKILLSETS</span><span>PROJECTS</span><span>CONTACT</span></nav></div>
+ <h1>Site <span>plan</span></h1>
+ <p class="lede"><small>Sheet W-01 · Key plan</small>Five roles drawn as plots. Each footprint is scaled to the months I held the role; the two still running are drawn dashed, under construction.</p>
+ <svg width="960" height="720" viewBox="0 0 960 720" fill="none">
+  <!-- grid refs -->
+  <g class="t" fill="#A9C0E2" font-size="13" font-weight="600" letter-spacing="2">
+   <text x="80" y="20">A</text><text x="280" y="20">B</text><text x="480" y="20">C</text><text x="680" y="20">D</text><text x="880" y="20">E</text>
+   <text x="0" y="130">1</text><text x="0" y="330">2</text><text x="0" y="530">3</text>
+  </g>
+  <!-- singapore island plot -->
+  <path d="M40 470 C60 440 150 430 200 450 C250 470 260 560 220 600 C170 640 70 630 45 590 C25 560 30 500 40 470Z" stroke="#A9C0E2" stroke-dasharray="5 5"/>
+  <rect x="70" y="480" width="120" height="96" stroke="#EEF4FF" stroke-width="2"/>
+  <rect x="75" y="485" width="110" height="86" stroke="#A9C0E2"/>
+  <text class="t" x="130" y="524" fill="#EEF4FF" font-size="17" font-weight="700" text-anchor="middle">J&amp;J</text>
+  <text class="t" x="130" y="544" fill="#A9C0E2" font-size="11" text-anchor="middle" letter-spacing="1.5">6 MO · 2024</text>
+  <text class="t" x="40" y="664" fill="#A9C0E2" font-size="13" font-weight="600" letter-spacing="2">SITE 1 · SINGAPORE</text>
+  <!-- break line -->
+  <path d="M270 700 L300 420 L285 410 L315 395 L300 385 L330 80" stroke="#A9C0E2"/>
+  <text class="t" x="320" y="300" fill="#A9C0E2" font-size="11" letter-spacing="2" transform="rotate(-84 320 300)">≈ 4,100 KM NOT TO SCALE</text>
+  <!-- india site boundary -->
+  <rect x="380" y="60" width="560" height="600" stroke="#EEF4FF" stroke-width="1.5"/>
+  <text class="t" x="390" y="684" fill="#A9C0E2" font-size="13" font-weight="600" letter-spacing="2">SITE 2 · NEW DELHI · NOIDA · REMOTE</text>
+  <!-- dsci 8mo -->
+  <rect x="420" y="100" width="190" height="150" stroke="#EEF4FF" stroke-width="2"/>
+  <path d="M420 100 L610 250 M450 100 L610 225" stroke="#A9C0E2" opacity=".35"/>
+  <text class="t" x="515" y="170" fill="#EEF4FF" font-size="19" font-weight="700" text-anchor="middle" letter-spacing="1">DSCI NASSCOM</text>
+  <text class="t" x="515" y="192" fill="#A9C0E2" font-size="11" text-anchor="middle" letter-spacing="1.5">PROJECT LEAD · 8 MO</text>
+  <!-- brillio 3mo -->
+  <rect x="650" y="100" width="110" height="90" stroke="#EEF4FF" stroke-width="2"/>
+  <text class="t" x="705" y="148" fill="#EEF4FF" font-size="16" font-weight="700" text-anchor="middle">BRILLIO</text>
+  <text class="t" x="705" y="168" fill="#A9C0E2" font-size="11" text-anchor="middle" letter-spacing="1.5">3 MO</text>
+  <!-- chetu dashed big -->
+  <rect x="420" y="300" width="250" height="320" stroke="#EEF4FF" stroke-width="2" stroke-dasharray="10 6"/>
+  <text class="t" x="545" y="450" fill="#EEF4FF" font-size="26" font-weight="700" text-anchor="middle" letter-spacing="1">CHETU INC</text>
+  <text class="t" x="545" y="474" fill="#A9C0E2" font-size="12" text-anchor="middle" letter-spacing="1.5">FREELANCE · 13 MO →</text>
+  <!-- nextgen dashed -->
+  <rect x="700" y="300" width="200" height="290" stroke="#EEF4FF" stroke-width="2" stroke-dasharray="10 6"/>
+  <text class="t" x="800" y="440" fill="#EEF4FF" font-size="24" font-weight="700" text-anchor="middle">NEXTGEN</text>
+  <text class="t" x="800" y="464" fill="#A9C0E2" font-size="12" text-anchor="middle" letter-spacing="1.5">DATA SCIENTIST · 11 MO →</text>
+  <!-- north arrow -->
+  <circle cx="880" cy="140" r="26" stroke="#EEF4FF"/><path d="M880 108 L890 150 L880 142 L870 150Z" fill="#EEF4FF"/>
+  <text class="t" x="880" y="98" fill="#EEF4FF" font-size="14" font-weight="700" text-anchor="middle">N</text>
+  <!-- dimension: chetu width -->
+  <path d="M420 640 H670 M420 632 V648 M670 632 V648" stroke="#EEF4FF"/>
+ </svg>
+ <div class="legend"><span><i></i>Completed role</span><span><i class="dash"></i>Running now</span><span>Area ∝ months held</span></div>
+ <div class="stamp">Start a project</div>
+</div>
+</body></html>

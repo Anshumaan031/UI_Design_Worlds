@@ -1,0 +1,94 @@
+{
+  "id": "abyss",
+  "name": "Abyss",
+  "status": "proposed",
+  "tone": "dark",
+  "play": "high",
+  "fit": "Research, deep-dive essays, data storytelling, mysterious launches",
+  "use": [
+    "Editorial",
+    "Launch / event"
+  ],
+  "feel": [
+    "Mysterious",
+    "Calm"
+  ],
+  "keywords": "deep sea ocean flashlight dark data story bioluminescent",
+  "idea": "The page sits at the bottom of a deep-sea trench. It is almost pitch black; your cursor is the submersible's lamp, and only bioluminescent creatures glow on their own.",
+  "note": "Live: move the pointer (or focus the stage and use the arrow keys) to sweep the lamp; the depth gauge tracks it. \"Surface\" lifts the darkness so everything can be read.",
+  "fonts": [
+    "Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900",
+    "IBM+Plex+Mono:wght@400;600"
+  ],
+  "borrowed": "Deep-sea exploration: submersible lamps cutting through black water, marine snow, bioluminescent jellyfish and anglerfish lures, depth gauges, specimen numbering from expedition logs, and the hush of the hadal zone.",
+  "mood": "Mysterious, quiet, rewarding curiosity. Suits research write-ups, long-form deep dives, data stories that reveal one thing at a time, and teaser launch pages. The reveal is the content strategy.",
+  "palette": [
+    {
+      "name": "Abyss",
+      "hex": "#02060D",
+      "role": "darkness"
+    },
+    {
+      "name": "Trench",
+      "hex": "#071726",
+      "role": "lit water"
+    },
+    {
+      "name": "Bone",
+      "hex": "#DDE8EE",
+      "role": "text"
+    },
+    {
+      "name": "Bio cyan",
+      "hex": "#3BF7FF",
+      "role": "instruments, emphasis"
+    },
+    {
+      "name": "Jelly violet",
+      "hex": "#A78BFF",
+      "role": "creatures"
+    },
+    {
+      "name": "Lure",
+      "hex": "#FFE45C",
+      "role": "one point of light"
+    }
+  ],
+  "type": [
+    {
+      "sample": "What lives <em style=\"color:#2BB8C0\">below</em>",
+      "style": "font-family:'Fraunces';font-weight:300;letter-spacing:-.035em;font-size:36px",
+      "meta": "Display · Fraunces 300, italic for the one word that matters"
+    },
+    {
+      "sample": "No. 03 · −4,736 m",
+      "style": "font-family:'IBM Plex Mono';font-size:14px;letter-spacing:.22em;text-transform:uppercase",
+      "meta": "Instruments & log · IBM Plex Mono"
+    }
+  ],
+  "patterns": [
+    {
+      "css": "background:radial-gradient(circle 40px at 40% 45%,rgba(2,6,13,0),rgba(2,6,13,.55) 48%,rgba(2,6,13,.97)),linear-gradient(135deg,#0B2A44,#071726)",
+      "label": "Lamp mask"
+    },
+    {
+      "css": "background:radial-gradient(circle,rgba(221,232,238,.6) 0 1px,transparent 1.6px) 0 0/22px 26px,radial-gradient(circle,rgba(59,247,255,.45) 0 1px,transparent 1.6px) 9px 11px/31px 37px,#02060D",
+      "label": "Marine snow"
+    },
+    {
+      "css": "background:radial-gradient(circle at 50% 50%,#FFE45C 0 5px,rgba(255,228,92,.35) 9px,transparent 26px),#02060D",
+      "label": "Lure glow"
+    }
+  ],
+  "motion": [
+    "One overlay: `radial-gradient(circle 170px at var(--x) var(--y), transparent, …97% black)` driven by the pointer.",
+    "Creatures sit above the overlay so they glow in the dark; they bob (5.5s) and sway (3.2s) out of phase.",
+    "Marine snow drifts down forever on two offset layers; depth reads off the lamp's y position."
+  ],
+  "watchouts": [
+    "Hidden text is inaccessible text. Always ship a \"Surface\" control and never hide navigation in the dark.",
+    "Touch has no hover: on phones, default the lamp to the content or start surfaced.",
+    "Keep it to one lamp-lit hero. A whole site in the dark is tiring."
+  ],
+  "tokens": "--abyss: #02060D;  --trench: #071726;  --bone: #DDE8EE;  --cyan: #3BF7FF;  --violet: #A78BFF;  --lure: #FFE45C;\n--display: 'Fraunces', serif (300, -0.035em);  --mono: 'IBM Plex Mono', monospace\nlamp: radial-gradient(circle 170px at var(--x) var(--y), rgba(2,6,13,0) 0, rgba(2,6,13,.55) 48%, rgba(2,6,13,.97) 100%)\nglow: filter: drop-shadow(0 0 10px var(--violet));"
+}

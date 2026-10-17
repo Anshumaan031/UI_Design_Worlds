@@ -1,0 +1,13 @@
+.tr-s { --bg: #FFFFFF; --ink: #1B1B1B; --green: #009B3A; --orange: #F08A00; --purple: #7D3F98; --blue: #0074C8; background: var(--bg); color: var(--ink); font-family: 'Overpass', sans-serif; padding: 28px clamp(16px, 4vw, 44px); }
+.tr-s__sign { display: flex; align-items: center; gap: 14px; background: var(--ink); color: #fff; padding: 14px 18px; border-radius: 8px; font-weight: 800; font-size: clamp(20px, 3vw, 30px); letter-spacing: -0.01em; }
+.tr-s__bullet { flex: none; width: 1.5em; height: 1.5em; display: grid; place-items: center; border-radius: 50%; color: #fff; font-weight: 900; font-size: 0.8em; }
+.tr-s__sign small { margin-left: auto; font-weight: 600; font-size: 0.55em; color: #BDBDBD; }
+.tr-s__map { display: block; width: 100%; height: auto; margin-top: 16px; }
+.tr-s__map .ln { fill: none; stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
+.tr-s__map .st { fill: #fff; stroke: var(--ink); stroke-width: 3; cursor: pointer; transition: r 200ms; }
+.tr-s__map .ic { fill: #fff; stroke: var(--ink); stroke-width: 4; }
+.tr-s__map g.stop:hover .st, .tr-s__map g.stop:focus-visible .st { r: 11; fill: var(--ink); }
+.tr-s__map g.stop { outline: none; }
+.tr-s__map text { font: 700 14px 'Overpass', sans-serif; fill: var(--ink); }
+.tr-s__map .train { fill: var(--ink); }
+.tr-s__info { margin: 8px 0 0; font-size: 15px; font-weight: 600; min-height: 1.5em; }

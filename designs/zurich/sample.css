@@ -1,0 +1,35 @@
+.zd-s {
+  display: grid; gap: 26px; align-content: start; padding: 32px 40px 40px; border-radius: 0;
+  background-color: #FAFAFA; color: #111111; font-family: 'Inter', sans-serif;
+  background-image: linear-gradient(to right, rgba(17,17,17,.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(17,17,17,.04) 1px, transparent 1px);
+  background-size: 40px 40px; animation: zdDrift 20s linear infinite;
+}
+@keyframes zdDrift { to { background-position: 40px 40px; } }
+.zd-s__top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.zd-s__top b { font-size: 14px; letter-spacing: -.025em; }
+.zd-s__top b span { color: #6C6C6C; }
+.zd-s__top nav { display: flex; flex-wrap: wrap; gap: 8px 32px; }
+.zd-s__top nav .is-on { color: #E60026; }
+.zd-s__name { margin: 8px 0 0; font-weight: 700; text-transform: uppercase; font-size: clamp(2.6rem, 7vw, 5.5rem); line-height: .9; letter-spacing: -.05em; }
+.zd-s__name span { display: block; }
+.zd-s__first { color: transparent; -webkit-text-stroke: 2px #111111; }
+.zd-s__last { color: #E60026; padding-left: clamp(0px, 6vw, 96px); }
+.zd-s__role { height: 1.1em; overflow: hidden; border-top: 1px solid #111111; padding-top: 10px; box-sizing: content-box; max-width: 34ch; font-weight: 800; font-size: 18px; text-transform: uppercase; letter-spacing: -.02em; }
+.zd-s__role i { display: block; font-style: normal; animation: zdRole 8.4s cubic-bezier(.76,0,.24,1) infinite; }
+.zd-s__role i span { display: block; height: 1.1em; line-height: 1.1em; }
+@keyframes zdRole { 0%, 28% { transform: translateY(0); } 33%, 61% { transform: translateY(-1.1em); } 66%, 94% { transform: translateY(-2.2em); } 100% { transform: translateY(-3.3em); } }
+.zd-s__row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
+.zd-s__btn, .zd-s__out { appearance: none; border: 1px solid; border-radius: 0; padding: 16px 32px; font: 700 12px/1 'Inter', sans-serif; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; transition: background 300ms, color 300ms, border-color 300ms; }
+.zd-s__btn { background: #E60026; border-color: #E60026; color: #FFFFFF; }
+.zd-s__btn:hover { background: #000000; border-color: #000000; }
+.zd-s__out { background: transparent; border-color: #000000; color: #000000; }
+.zd-s__out:hover { background: #000000; color: #FFFFFF; }
+.zd-s__txt { appearance: none; border: 0; background: none; padding: 8px 0; cursor: pointer; font: 700 12px/1 'Inter', sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #111111; background-image: linear-gradient(#E60026, #E60026); background-size: 0 1px; background-position: left bottom; background-repeat: no-repeat; transition: color 300ms, background-size 300ms; }
+.zd-s__txt:hover { color: #E60026; background-size: 100% 1px; }
+.zd-s__stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: rgba(0,0,0,.1); border: 1px solid rgba(0,0,0,.1); max-width: 560px; }
+.zd-s__stats div { background: #FAFAFA; padding: 20px 24px; display: grid; gap: 6px; transition: background 300ms, color 300ms; }
+.zd-s__stats div:hover { background: #111111; color: #FFFFFF; }
+.zd-s__stats b { font-size: 34px; font-weight: 800; letter-spacing: -.05em; line-height: 1; }
+.zd-s__stats small { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #6C6C6C; }
+.zd-s__stats div:hover small { color: #FFFFFF; }
+@media (max-width: 600px) { .zd-s { padding: 24px 18px 28px; } .zd-s__stats { grid-template-columns: 1fr; } }
